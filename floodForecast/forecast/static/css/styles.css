@@ -1021,17 +1021,28 @@ body {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1100px) {
-    .sensor-grid { grid-template-columns: repeat(2, 1fr); }
-    .forecast-grid { grid-template-columns: repeat(3, 1fr); }
-    .contact-grid { grid-template-columns: 1fr 1fr; }
-    .about-content { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 768px) {
     :root { --sidebar-width: 0px; }
-    .sidebar { display: none; }
-    .main-content { padding: 20px; }
+
+    /* Mobile nav shows */
+    .mobile-nav { display: flex; }
+
+    /* Sidebar slides in/out instead of hiding */
+    .sidebar {
+        display: flex;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+    .sidebar.open { transform: translateX(0); }
+
+    /* Main content full width with top padding for mobile nav */
+    .main-content {
+        margin-left: 0;
+        padding: 76px 16px 20px;
+    }
+
+    /* Other responsive adjustments */
     .sensor-grid { grid-template-columns: 1fr 1fr; }
     .dashboard-row { grid-template-columns: 1fr; }
     .dashboard-row--history { grid-template-columns: 1fr; }

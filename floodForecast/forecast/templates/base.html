@@ -11,6 +11,20 @@
 </head>
 <body>
 
+    <!-- MOBILE NAVBAR (must be first) -->
+    <div class="mobile-nav">
+        <div class="sidebar__logo-icon">
+            <i class="bi bi-water"></i>
+        </div>
+        <span class="mobile-nav__title">FLOOD FORECAST MK.1</span>
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="sidebar__logo">
@@ -54,5 +68,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     {% block scripts %}{% endblock %}
+
+    <!-- HAMBURGER SCRIPT (must be last) -->
+    <script>
+        const hamburgerBtn   = document.getElementById('hamburgerBtn');
+        const sidebar        = document.querySelector('.sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        hamburgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            sidebarOverlay.classList.toggle('active');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+        });
+    </script>
+
 </body>
 </html>
