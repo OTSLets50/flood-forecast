@@ -15,11 +15,15 @@
             <i class="bi bi-circle-fill pulse"></i>
             Last updated: <span id="lastUpdated">{{ last_updated }}</span>
         </span>
+        {% if is_dummy %}
+        <span class="update-badge" style="color: #f59e0b; border-color: rgba(245,158,11,0.3);">
+            <i class="bi bi-exclamation-circle"></i> Demo Mode
+        </span>
+        {% endif %}
     </div>
 </div>
 
 <!-- FLOOD STATUS BANNER -->
-{% if latest %}
 <div class="status-banner status-banner--{{ flood_status }}">
     {% if flood_status == 'flood' %}
         <i class="bi bi-exclamation-triangle-fill"></i>
@@ -32,7 +36,6 @@
         <span>✓ ALL CLEAR — Water levels within safe range</span>
     {% endif %}
 </div>
-{% endif %}
 
 <!-- SENSOR CARDS ROW -->
 <div class="sensor-grid">
@@ -43,12 +46,12 @@
             <i class="bi bi-water sensor-card__icon sensor-card__icon--blue"></i>
         </div>
         <div class="sensor-card__value">
-            {{ latest.water_depth|default:"—" }}
+            {% if latest %}{{ latest.water_depth }}{% else %}{{ dummy.water_depth }}{% endif %}
             <span class="sensor-card__unit">cm</span>
         </div>
         <div class="sensor-card__bar">
             <div class="sensor-card__bar-fill sensor-card__bar-fill--{{ flood_status }}"
-                 style="width: {% if latest %}{% widthratio latest.water_depth 350 100 %}%{% else %}0%{% endif %}">
+                 style="width: {% if latest %}{% widthratio latest.water_depth 350 100 %}%{% else %}{% widthratio dummy.water_depth 350 100 %}%{% endif %}">
             </div>
         </div>
         <span class="sensor-card__status sensor-card__status--{{ flood_status }}">{{ flood_status|upper }}</span>
@@ -60,7 +63,7 @@
             <i class="bi bi-thermometer-half sensor-card__icon sensor-card__icon--red"></i>
         </div>
         <div class="sensor-card__value">
-            {{ latest.temperature|default:"—" }}
+            {% if latest %}{{ latest.temperature }}{% else %}{{ dummy.temperature }}{% endif %}
             <span class="sensor-card__unit">°C</span>
         </div>
     </div>
@@ -71,7 +74,7 @@
             <i class="bi bi-droplet-half sensor-card__icon sensor-card__icon--cyan"></i>
         </div>
         <div class="sensor-card__value">
-            {{ latest.humidity|default:"—" }}
+            {% if latest %}{{ latest.humidity }}{% else %}{{ dummy.humidity }}{% endif %}
             <span class="sensor-card__unit">%</span>
         </div>
     </div>
@@ -82,7 +85,7 @@
             <i class="bi bi-cloud-rain sensor-card__icon sensor-card__icon--blue"></i>
         </div>
         <div class="sensor-card__value">
-            {{ latest.rain_volume|default:"—" }}
+            {% if latest %}{{ latest.rain_volume }}{% else %}{{ dummy.rain_volume }}{% endif %}
             <span class="sensor-card__unit">mm</span>
         </div>
     </div>
@@ -93,7 +96,7 @@
             <i class="bi bi-wind sensor-card__icon sensor-card__icon--green"></i>
         </div>
         <div class="sensor-card__value">
-            {{ latest.wind_speed|default:"—" }}
+            {% if latest %}{{ latest.wind_speed }}{% else %}{{ dummy.wind_speed }}{% endif %}
             <span class="sensor-card__unit">m/s</span>
         </div>
     </div>
@@ -104,7 +107,7 @@
             <i class="bi bi-compass sensor-card__icon sensor-card__icon--yellow"></i>
         </div>
         <div class="sensor-card__value sensor-card__value--text">
-            {{ latest.wind_direction|default:"—" }}
+            {% if latest %}{{ latest.wind_direction }}{% else %}{{ dummy.wind_direction }}{% endif %}
         </div>
     </div>
 
@@ -117,12 +120,12 @@
     <div class="panel panel--sm">
         <div class="panel__header">
             <h3 class="panel__title">Flood Probability</h3>
-            <span class="panel__badge">XGBoost</span>
+            <span class="panel__badge">{{ model_name }}</span>
         </div>
         <div class="gauge-container">
             <canvas id="gaugeChart" width="200" height="200"></canvas>
             <div class="gauge-label">
-                <span class="gauge-value">{{ latest.flood_probability|default:"0" }}</span>
+                <span class="gauge-value">{% if latest %}{{ latest.flood_probability|default:"0" }}{% else %}{{ dummy.flood_probability }}{% endif %}</span>
                 <span class="gauge-unit">%</span>
             </div>
         </div>
@@ -192,7 +195,7 @@
                     <td class="mono">{{ reading.flood_probability }}%</td>
                 </tr>
                 {% empty %}
-                <tr><td colspan="8" class="empty-row">No readings yet</td></tr>
+                <tr><td colspan="8" class="empty-row">No readings yet — connect ESP32 to start logging</td></tr>
                 {% endfor %}
             </tbody>
         </table>
@@ -211,7 +214,7 @@
     ];
 
     // Flood probability gauge (doughnut chart)
-    const floodProb = {{ latest.flood_probability|default:0 }};
+    const floodProb = {% if latest %}{{ latest.flood_probability|default:0 }}{% else %}{{ dummy.flood_probability|default:0 }}{% endif %};
     const gaugeCtx  = document.getElementById('gaugeChart');
     if (gaugeCtx) {
         const gaugeColor = floodProb >= 70 ? '#ef4444' : floodProb >= 40 ? '#f59e0b' : '#22c55e';

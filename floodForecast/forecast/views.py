@@ -2,14 +2,13 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
-from django.conf import settings
 
 import json
-import joblib
+import os
+import pickle
 import numpy as np
 import pandas as pd
 import requests
-import os
 from datetime import datetime, timedelta
 
 from .models import SensorReading
@@ -18,24 +17,57 @@ from .models import SensorReading
 #  CONFIGURATION
 # ============================================================
 
-TELEGRAM_TOKEN   = '8784024411:AAGt_49V_x5cD5zacnTKBGSkKQIuBpeIIcI'
-TELEGRAM_CHAT_ID = '604412691'
+TELEGRAM_TOKEN    = '8784024411:AAGt_49V_x5cD5zacnTKBGSkKQIuBpeIIcI'
+TELEGRAM_CHAT_ID  = '604412691'
+FLOOD_THRESHOLD   = 150.0
+WARNING_THRESHOLD = 100.0
 
-FLOOD_THRESHOLD   = 150.0   # cm — red alert
-WARNING_THRESHOLD = 100.0   # cm — orange warning
+# Default dummy data shown when no ESP32 data exists
+# This is NOT saved to database — only used for display
+DEFAULT_SENSOR_DATA = {
+    'temperature':    27.5,
+    'humidity':       82.0,
+    'water_depth':    65.0,
+    'rain_volume':    0.0,
+    'wind_speed':     1.5,
+    'wind_direction': 'N',
+    'flood_risk':     'safe',
+    'flood_probability': 12.0,
+    'is_dummy': True,   # flag so template knows this is dummy data
+}
 
-# Load XGBoost models once when server starts
+# TFT model config
+MAX_ENCODER_LENGTH   = 24
+MAX_PREDICTION_LENGTH = 5
+
+# Load TFT model
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ML_DIR   = os.path.join(BASE_DIR, 'ml')
 
+tft_model   = None
+tft_dataset = None
+
 try:
-    reg_model = joblib.load(os.path.join(ML_DIR, 'flood_regression.pkl'))
-    clf_model = joblib.load(os.path.join(ML_DIR, 'flood_classifier.pkl'))
-    print('✅ XGBoost models loaded successfully!')
+    import torch
+    from pytorch_forecasting import TemporalFusionTransformer
+
+    ckpt_path     = os.path.join(ML_DIR, 'tft_flood_model.ckpt')
+    dataset_path  = os.path.join(ML_DIR, 'tft_training_dataset.pkl')
+
+    if os.path.exists(ckpt_path) and os.path.exists(dataset_path):
+        tft_model = TemporalFusionTransformer.load_from_checkpoint(ckpt_path)
+        tft_model.eval()
+        with open(dataset_path, 'rb') as f:
+            tft_dataset = pickle.load(f)
+        print('✅ TFT model loaded successfully!')
+    else:
+        print('⚠️  TFT model files not found in forecast/ml/')
+        print('   Expected: tft_flood_model.ckpt, tft_training_dataset.pkl')
+
+except ImportError:
+    print('⚠️  pytorch-forecasting not installed. Run: pip install pytorch-forecasting')
 except Exception as e:
-    reg_model = None
-    clf_model = None
-    print(f'⚠️  Could not load models: {e}')
+    print(f'⚠️  Could not load TFT model: {e}')
 
 
 # ============================================================
@@ -43,133 +75,149 @@ except Exception as e:
 # ============================================================
 
 def send_telegram_alert(message):
-    """Send a flood alert message to Telegram."""
+    """Send Telegram flood alert."""
     try:
         url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
         requests.post(url, data={
-            'chat_id': TELEGRAM_CHAT_ID,
-            'text': message,
+            'chat_id':    TELEGRAM_CHAT_ID,
+            'text':       message,
             'parse_mode': 'HTML'
         }, timeout=5)
     except Exception as e:
-        print(f'Telegram alert failed: {e}')
+        print(f'Telegram error: {e}')
 
 
 def get_flood_status(water_depth):
-    """Return flood status based on water depth."""
+    """Return flood status string."""
     if water_depth >= FLOOD_THRESHOLD:
         return 'flood'
     elif water_depth >= WARNING_THRESHOLD:
         return 'warning'
-    else:
-        return 'safe'
+    return 'safe'
 
 
-def prepare_features(reading):
-    """Build XGBoost feature row from latest database readings."""
+def predict_next_5_tft(readings_qs):
+    """
+    Predict next 5 water depth readings using TFT model.
+    Falls back to simple linear extrapolation if TFT unavailable.
+    """
+    if tft_model is None or tft_dataset is None:
+        return predict_next_5_fallback(readings_qs)
 
-    # Get last 7 readings for lag features
-    recent = list(reversed(SensorReading.objects.order_by('-timestamp')[:7]))
+    try:
+        # Build dataframe from recent readings
+        records = list(readings_qs.order_by('-timestamp')[:MAX_ENCODER_LENGTH])
+        records = list(reversed(records))
 
-    now         = reading.timestamp
-    water_depth = reading.water_depth
-    rain_volume = reading.rain_volume
-    temp        = reading.temperature
-    humidity    = reading.humidity
+        if len(records) < 6:
+            return predict_next_5_fallback(readings_qs)
 
-    # Helper to get lag value safely
-    def get_lag(n, field):
-        try:
-            return getattr(recent[-(n + 1)], field)
-        except IndexError:
-            return getattr(reading, field)
+        df = pd.DataFrame([{
+            'time':        r.timestamp,
+            'Temperature': r.temperature,
+            'Humidity':    r.humidity,
+            'Water Depth': r.water_depth,
+            'Rain Volume': r.rain_volume,
+        } for r in records])
 
-    wd_lag1 = get_lag(1, 'water_depth')
-    wd_lag2 = get_lag(2, 'water_depth')
-    wd_lag3 = get_lag(3, 'water_depth')
-    wd_lag6 = get_lag(6, 'water_depth')
-    rv_lag1 = get_lag(1, 'rain_volume')
-    rv_lag2 = get_lag(2, 'rain_volume')
-    rv_lag3 = get_lag(3, 'rain_volume')
-    tp_lag1 = get_lag(1, 'temperature')
-    hm_lag1 = get_lag(1, 'humidity')
+        df['time']      = pd.to_datetime(df['time'], utc=True)
+        df['time_idx']  = range(len(df))
+        df['hour']      = df['time'].dt.hour
+        df['dayofweek'] = df['time'].dt.dayofweek
+        df['day']       = df['time'].dt.day
+        df['month']     = df['time'].dt.month
+        df['series_id'] = '0'
 
-    # Rolling statistics
-    depths = [r.water_depth for r in recent[-6:]]
-    rains  = [r.rain_volume for r in recent[-6:]]
+        from pytorch_forecasting import TimeSeriesDataSet
 
-    wd_roll3 = np.mean(depths[-3:]) if len(depths) >= 3 else water_depth
-    wd_roll6 = np.mean(depths)      if len(depths) >= 1 else water_depth
-    rv_roll3 = np.sum(rains[-3:])   if len(rains)  >= 3 else rain_volume
-    rv_roll6 = np.sum(rains)        if len(rains)  >= 1 else rain_volume
+        pred_dataset = TimeSeriesDataSet.from_dataset(
+            tft_dataset, df, predict=True, stop_randomization=True
+        )
+        loader = pred_dataset.to_dataloader(train=False, batch_size=1, num_workers=0)
 
-    features = {
-        'Temperature':             temp,
-        'Humidity':                humidity,
-        'Water Depth':             water_depth,
-        'Rain Volume':             rain_volume,
-        'hour':                    now.hour,
-        'day':                     now.day,
-        'month':                   now.month,
-        'dayofweek':               now.weekday(),
-        'WaterDepth_lag1':         wd_lag1,
-        'WaterDepth_lag2':         wd_lag2,
-        'WaterDepth_lag3':         wd_lag3,
-        'WaterDepth_lag6':         wd_lag6,
-        'RainVolume_lag1':         rv_lag1,
-        'RainVolume_lag2':         rv_lag2,
-        'RainVolume_lag3':         rv_lag3,
-        'Temperature_lag1':        tp_lag1,
-        'Humidity_lag1':           hm_lag1,
-        'WaterDepth_rolling3_mean': wd_roll3,
-        'WaterDepth_rolling6_mean': wd_roll6,
-        'RainVolume_rolling3_sum':  rv_roll3,
-        'RainVolume_rolling6_sum':  rv_roll6,
-        'WaterDepth_change':        water_depth - wd_lag1,
-        'WaterDepth_change2':       water_depth - wd_lag2,
-    }
+        import torch
+        with torch.no_grad():
+            raw_preds = tft_model.predict(loader, mode='quantiles')
 
-    return pd.DataFrame([features])
+        median = raw_preds[0, :MAX_PREDICTION_LENGTH, 3].numpy()
+        lower  = raw_preds[0, :MAX_PREDICTION_LENGTH, 0].numpy()
+        upper  = raw_preds[0, :MAX_PREDICTION_LENGTH, 6].numpy()
 
+        last_time = records[-1].timestamp
+        predictions = []
 
-def predict_next_5(current_reading):
-    """Predict water depth and flood probability for next 5 readings (~38 min each)."""
-    if reg_model is None or clf_model is None:
-        return []
-
-    predictions   = []
-    feature_row   = prepare_features(current_reading)
-    current_depth = current_reading.water_depth
-    now           = current_reading.timestamp
-
-    for step in range(1, 6):
-        try:
-            next_depth = float(reg_model.predict(feature_row)[0])
-            flood_prob = float(clf_model.predict_proba(feature_row)[0][1]) * 100
-            next_time  = now + timedelta(minutes=38 * step)
+        for i in range(MAX_PREDICTION_LENGTH):
+            depth      = float(median[i])
+            flood_prob = min(99, max(1, (depth - 45) / 3.0))
+            next_time  = last_time + timedelta(minutes=38 * (i + 1))
 
             predictions.append({
                 'time':         next_time.strftime('%H:%M'),
-                'water_depth':  round(next_depth, 1),
+                'water_depth':  round(depth, 1),
+                'lower':        round(float(lower[i]), 1),
+                'upper':        round(float(upper[i]), 1),
                 'flood_prob':   round(flood_prob, 1),
-                'flood_status': get_flood_status(next_depth),
+                'flood_status': get_flood_status(depth),
             })
 
-            # Update features for next prediction step
-            feature_row['WaterDepth_lag2']         = feature_row['WaterDepth_lag1']
-            feature_row['WaterDepth_lag3']         = feature_row['WaterDepth_lag2']
-            feature_row['WaterDepth_lag6']         = feature_row['WaterDepth_lag3']
-            feature_row['WaterDepth_lag1']         = current_depth
-            feature_row['WaterDepth_change2']      = next_depth - current_depth
-            feature_row['WaterDepth_change']       = next_depth - float(feature_row['WaterDepth_lag1'].iloc[0])
-            feature_row['Water Depth']             = next_depth
-            feature_row['hour']                    = next_time.hour
-            current_depth = next_depth
+        return predictions
 
-        except Exception as e:
-            print(f'Prediction step {step} failed: {e}')
-            break
+    except Exception as e:
+        print(f'TFT prediction error: {e}')
+        return predict_next_5_fallback(readings_qs)
 
+
+def predict_next_5_fallback(readings_qs):
+    """
+    Simple fallback prediction when TFT is unavailable.
+    Uses linear trend from last 6 readings.
+    """
+    records = list(readings_qs.order_by('-timestamp')[:6])
+    if not records:
+        return []
+
+    records = list(reversed(records))
+    depths  = [r.water_depth for r in records]
+    trend   = (depths[-1] - depths[0]) / max(len(depths) - 1, 1)
+    last_depth = depths[-1]
+    last_time  = records[-1].timestamp
+    predictions = []
+
+    for i in range(1, 6):
+        depth      = max(0, last_depth + trend * i)
+        flood_prob = min(99, max(1, (depth - 45) / 3.0))
+        next_time  = last_time + timedelta(minutes=38 * i)
+
+        predictions.append({
+            'time':         next_time.strftime('%H:%M'),
+            'water_depth':  round(depth, 1),
+            'lower':        round(max(0, depth - 5), 1),
+            'upper':        round(depth + 5, 1),
+            'flood_prob':   round(flood_prob, 1),
+            'flood_status': get_flood_status(depth),
+        })
+
+    return predictions
+
+
+def get_dummy_predictions():
+    """Default predictions shown when no ESP32 data exists."""
+    from datetime import datetime
+    import pytz
+    now = datetime.now(pytz.timezone('Asia/Kuala_Lumpur'))
+    predictions = []
+    base_depth = 65.0
+    for i in range(1, 6):
+        depth     = base_depth + np.random.normal(0, 1)
+        next_time = now + timedelta(minutes=38 * i)
+        predictions.append({
+            'time':         next_time.strftime('%H:%M'),
+            'water_depth':  round(depth, 1),
+            'lower':        round(depth - 3, 1),
+            'upper':        round(depth + 3, 1),
+            'flood_prob':   12.0,
+            'flood_status': 'safe',
+        })
     return predictions
 
 
@@ -178,18 +226,23 @@ def predict_next_5(current_reading):
 # ============================================================
 
 def dashboard(request):
-    """Main dashboard — live sensor data + 5 future predictions."""
+    """Main dashboard — live sensor data + TFT predictions."""
     latest = SensorReading.objects.order_by('-timestamp').first()
 
     if latest:
-        predictions  = predict_next_5(latest)
+        # Real ESP32 data available
+        predictions  = predict_next_5_tft(SensorReading.objects)
         flood_status = get_flood_status(latest.water_depth)
+        recent       = SensorReading.objects.order_by('-timestamp')[:10]
+
         context = {
-            'latest':       latest,
-            'flood_status': flood_status,
-            'predictions':  predictions,
-            'last_updated': latest.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
-            'recent_readings': SensorReading.objects.order_by('-timestamp')[:10],  # ← add this
+            'latest':          latest,
+            'flood_status':    flood_status,
+            'predictions':     predictions,
+            'recent_readings': recent,
+            'last_updated':    latest.timestamp.strftime('%Y-%m-%d %H:%M:%S'),
+            'is_dummy':        False,
+            'model_name':      'TFT' if tft_model else 'Linear Extrapolation',
             'pred1': predictions[0] if len(predictions) > 0 else None,
             'pred2': predictions[1] if len(predictions) > 1 else None,
             'pred3': predictions[2] if len(predictions) > 2 else None,
@@ -197,11 +250,22 @@ def dashboard(request):
             'pred5': predictions[4] if len(predictions) > 4 else None,
         }
     else:
+        # No ESP32 data — show default dummy data
+        predictions = get_dummy_predictions()
         context = {
-            'latest':       None,
-            'flood_status': 'safe',
-            'predictions':  [],
-            'last_updated': 'Waiting for ESP32 data...',
+            'latest':          None,
+            'dummy':           DEFAULT_SENSOR_DATA,
+            'flood_status':    'safe',
+            'predictions':     predictions,
+            'recent_readings': [],
+            'last_updated':    'Waiting for ESP32 data...',
+            'is_dummy':        True,
+            'model_name':      'TFT' if tft_model else 'Fallback',
+            'pred1': predictions[0] if len(predictions) > 0 else None,
+            'pred2': predictions[1] if len(predictions) > 1 else None,
+            'pred3': predictions[2] if len(predictions) > 2 else None,
+            'pred4': predictions[3] if len(predictions) > 3 else None,
+            'pred5': predictions[4] if len(predictions) > 4 else None,
         }
 
     return render(request, 'dashboard.html', context)
@@ -213,43 +277,31 @@ def dashboard(request):
 
 def history(request):
     """History page with calendar navigation."""
-    # Get list of dates that have data (for calendar highlighting)
     dates_with_data = SensorReading.objects.dates('timestamp', 'day')
     date_list = [d.strftime('%Y-%m-%d') for d in dates_with_data]
-
-    context = {
+    return render(request, 'history.html', {
         'dates_with_data': json.dumps(date_list),
-    }
-    return render(request, 'history.html', context)
+    })
 
 
 def get_history_data(request):
-    """
-    API endpoint — returns sensor readings for a selected date as JSON.
-    Called by calendar.js when user picks a date.
-    Usage: GET /api/history/?date=2026-05-07
-    """
+    """API — returns sensor readings for a selected date."""
     date_str = request.GET.get('date', '')
-
     if not date_str:
         return JsonResponse({'error': 'No date provided'}, status=400)
 
     try:
         selected_date = datetime.strptime(date_str, '%Y-%m-%d').date()
     except ValueError:
-        return JsonResponse({'error': 'Invalid date format. Use YYYY-MM-DD'}, status=400)
+        return JsonResponse({'error': 'Invalid date format'}, status=400)
 
     readings = SensorReading.objects.filter(
         timestamp__date=selected_date
     ).order_by('timestamp')
 
     if not readings.exists():
-        return JsonResponse({
-            'date':     date_str,
-            'count':    0,
-            'readings': [],
-            'message':  'No data found for this date',
-        })
+        return JsonResponse({'date': date_str, 'count': 0, 'readings': [],
+                             'message': 'No data found for this date'})
 
     data = [{
         'timestamp':         r.timestamp.strftime('%H:%M:%S'),
@@ -257,11 +309,13 @@ def get_history_data(request):
         'humidity':          round(r.humidity, 2),
         'water_depth':       round(r.water_depth, 2),
         'rain_volume':       round(r.rain_volume, 2),
+        'wind_speed':        round(r.wind_speed, 2),
+        'wind_direction':    r.wind_direction,
         'flood_status':      r.flood_risk,
         'flood_probability': round(r.flood_probability, 1),
     } for r in readings]
 
-    depths = [r.water_depth for r in readings]
+    depths  = [r.water_depth for r in readings]
     summary = {
         'max_depth':    round(max(depths), 2),
         'min_depth':    round(min(depths), 2),
@@ -270,12 +324,8 @@ def get_history_data(request):
         'total_rain':   round(sum(r.rain_volume for r in readings), 2),
     }
 
-    return JsonResponse({
-        'date':     date_str,
-        'count':    readings.count(),
-        'summary':  summary,
-        'readings': data,
-    })
+    return JsonResponse({'date': date_str, 'count': readings.count(),
+                         'summary': summary, 'readings': data})
 
 
 # ============================================================
@@ -283,13 +333,14 @@ def get_history_data(request):
 # ============================================================
 
 def about(request):
-    """About page — project overview, Telegram bot link, contact info."""
+    """About page."""
     context = {
         'telegram_bot_url': 'https://t.me/FloodForecastMark1Bot',
         'email':            'wmhzq02@gmail.com',
         'linkedin':         'https://www.linkedin.com/in/w-m-haziq-138155321',
         'project_name':     'River Flood Forecasting Device',
         'bot_name':         'Flood Forecast Mark 1',
+        'model_name':       'Temporal Fusion Transformer (TFT)',
     }
     return render(request, 'about.html', context)
 
@@ -303,52 +354,54 @@ def receive_sensor_data(request):
     """
     ESP32 sends sensor data here via HTTP POST.
 
-    Expected JSON from ESP32:
+    Expected JSON:
     {
-        "temperature":  26.5,
-        "humidity":     85.2,
-        "water_depth":  67.4,
-        "rain_volume":  2.1
+        "temperature":   26.5,
+        "humidity":      85.2,
+        "water_depth":   67.4,
+        "rain_volume":   2.1,
+        "wind_speed":    3.2,
+        "wind_direction": 180.0
     }
     """
     if request.method != 'POST':
-        return JsonResponse({'error': 'Only POST method allowed'}, status=405)
+        return JsonResponse({'error': 'Only POST allowed'}, status=405)
 
     try:
-        body        = json.loads(request.body)
-        temperature = float(body.get('temperature', 0))
-        humidity    = float(body.get('humidity', 0))
-        water_depth = float(body.get('water_depth', 0))
-        rain_volume = float(body.get('rain_volume', 0))
-        wind_speed     = float(body.get('wind_speed', 0))      # new
-        wind_direction = str(body.get('wind_direction', 'N'))  # new
+        body           = json.loads(request.body)
+        temperature    = float(body.get('temperature', 0))
+        humidity       = float(body.get('humidity', 0))
+        water_depth    = float(body.get('water_depth', 0))
+        rain_volume    = float(body.get('rain_volume', 0))
+        wind_speed     = float(body.get('wind_speed', 0))
+        wind_direction = str(body.get('wind_direction', 'N'))
+        flood_status   = get_flood_status(water_depth)
 
-        flood_status = get_flood_status(water_depth)
-
-        # Save reading to database
+        # Save to database
         reading = SensorReading.objects.create(
-            temperature    = temperature,
-            humidity       = humidity,
-            water_depth    = water_depth,
-            rain_volume    = rain_volume,
-            wind_speed     = wind_speed,        # new
-            wind_direction = wind_direction,    # new
-            flood_risk     = flood_status,
+            temperature       = temperature,
+            humidity          = humidity,
+            water_depth       = water_depth,
+            rain_volume       = rain_volume,
+            wind_speed        = wind_speed,
+            wind_direction    = wind_direction,
+            flood_risk        = flood_status,
             flood_probability = 0.0,
         )
 
-        # Run XGBoost flood probability prediction
-        flood_probability = 0.0
-        if clf_model is not None:
-            try:
-                features          = prepare_features(reading)
-                flood_probability = float(clf_model.predict_proba(features)[0][1]) * 100
-                reading.flood_probability = round(flood_probability, 1)
-                reading.save()
-            except Exception as e:
-                print(f'Prediction error: {e}')
+        # TFT flood probability prediction
+        flood_probability = min(99, max(1, (water_depth - 45) / 3.0))
+        try:
+            predictions = predict_next_5_tft(SensorReading.objects)
+            if predictions:
+                flood_probability = predictions[0]['flood_prob']
+        except Exception as e:
+            print(f'Prediction error: {e}')
 
-        # Send Telegram alert for flood or warning
+        reading.flood_probability = round(flood_probability, 1)
+        reading.save()
+
+        # Telegram alerts
         if flood_status == 'flood':
             send_telegram_alert(
                 f'🚨 <b>FLOOD ALERT!</b>\n\n'
@@ -356,7 +409,7 @@ def receive_sensor_data(request):
                 f'💧 Water Depth: <b>{water_depth}cm</b> ‼️ DANGER\n'
                 f'🌡️ Temperature: {temperature}°C\n'
                 f'💦 Humidity: {humidity}%\n'
-                f'🌧️ Rain Volume: {rain_volume}mm\n'
+                f'🌧️ Rain: {rain_volume}mm\n'
                 f'📊 Flood Probability: <b>{round(flood_probability, 1)}%</b>\n'
                 f'🕐 {reading.timestamp.strftime("%Y-%m-%d %H:%M:%S")}'
             )
@@ -367,20 +420,19 @@ def receive_sensor_data(request):
                 f'💧 Water Depth: <b>{water_depth}cm</b> ⚠️ WARNING\n'
                 f'🌡️ Temperature: {temperature}°C\n'
                 f'💦 Humidity: {humidity}%\n'
-                f'🌧️ Rain Volume: {rain_volume}mm\n'
+                f'🌧️ Rain: {rain_volume}mm\n'
                 f'📊 Flood Probability: <b>{round(flood_probability, 1)}%</b>\n'
                 f'🕐 {reading.timestamp.strftime("%Y-%m-%d %H:%M:%S")}'
             )
 
         return JsonResponse({
             'status':            'success',
-            'message':           'Data received and saved',
             'flood_status':      flood_status,
             'flood_probability': round(flood_probability, 1),
             'reading_id':        reading.id,
         })
 
     except json.JSONDecodeError:
-        return JsonResponse({'error': 'Invalid JSON format'}, status=400)
+        return JsonResponse({'error': 'Invalid JSON'}, status=400)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)

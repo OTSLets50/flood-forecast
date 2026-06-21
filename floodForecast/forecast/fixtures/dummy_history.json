@@ -1,0 +1,3992 @@
+[
+  {
+    "model": "forecast.sensorreading",
+    "pk": 1,
+    "fields": {
+      "timestamp": "2026-06-15T00:00:00Z",
+      "temperature": 23.82,
+      "humidity": 94.87,
+      "water_depth": 60.99,
+      "rain_volume": 0,
+      "wind_speed": 0.17,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 2,
+    "fields": {
+      "timestamp": "2026-06-15T00:38:00Z",
+      "temperature": 22.28,
+      "humidity": 92.58,
+      "water_depth": 59.72,
+      "rain_volume": 0,
+      "wind_speed": 0.12,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 3,
+    "fields": {
+      "timestamp": "2026-06-15T01:16:00Z",
+      "temperature": 22.92,
+      "humidity": 93.36,
+      "water_depth": 62.59,
+      "rain_volume": 0,
+      "wind_speed": 0.57,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 4,
+    "fields": {
+      "timestamp": "2026-06-15T01:54:00Z",
+      "temperature": 23.2,
+      "humidity": 94.75,
+      "water_depth": 64.34,
+      "rain_volume": 0,
+      "wind_speed": 0.35,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 5,
+    "fields": {
+      "timestamp": "2026-06-15T02:32:00Z",
+      "temperature": 24.26,
+      "humidity": 91.94,
+      "water_depth": 62.03,
+      "rain_volume": 0.45,
+      "wind_speed": 4.11,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 6,
+    "fields": {
+      "timestamp": "2026-06-15T03:10:00Z",
+      "temperature": 23.45,
+      "humidity": 91.3,
+      "water_depth": 63.07,
+      "rain_volume": 0,
+      "wind_speed": 0.49,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 7,
+    "fields": {
+      "timestamp": "2026-06-15T03:48:00Z",
+      "temperature": 24.75,
+      "humidity": 94.08,
+      "water_depth": 66.69,
+      "rain_volume": 0,
+      "wind_speed": 7.45,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 7.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 8,
+    "fields": {
+      "timestamp": "2026-06-15T04:26:00Z",
+      "temperature": 25.01,
+      "humidity": 88.85,
+      "water_depth": 65.86,
+      "rain_volume": 0.6,
+      "wind_speed": 0.82,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 7.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 9,
+    "fields": {
+      "timestamp": "2026-06-15T05:04:00Z",
+      "temperature": 25.47,
+      "humidity": 89.26,
+      "water_depth": 63.89,
+      "rain_volume": 0,
+      "wind_speed": 0.4,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 10,
+    "fields": {
+      "timestamp": "2026-06-15T05:42:00Z",
+      "temperature": 26.2,
+      "humidity": 85.33,
+      "water_depth": 65.91,
+      "rain_volume": 0,
+      "wind_speed": 3.12,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 7.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 11,
+    "fields": {
+      "timestamp": "2026-06-15T06:20:00Z",
+      "temperature": 27.1,
+      "humidity": 86.06,
+      "water_depth": 64.07,
+      "rain_volume": 0.19,
+      "wind_speed": 2.15,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 12,
+    "fields": {
+      "timestamp": "2026-06-15T06:58:00Z",
+      "temperature": 26.7,
+      "humidity": 87.88,
+      "water_depth": 64.07,
+      "rain_volume": 0,
+      "wind_speed": 1.38,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 13,
+    "fields": {
+      "timestamp": "2026-06-15T07:36:00Z",
+      "temperature": 28.07,
+      "humidity": 77.47,
+      "water_depth": 65.31,
+      "rain_volume": 0,
+      "wind_speed": 1.62,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 14,
+    "fields": {
+      "timestamp": "2026-06-15T08:14:00Z",
+      "temperature": 28.81,
+      "humidity": 78.41,
+      "water_depth": 60.5,
+      "rain_volume": 0,
+      "wind_speed": 2.54,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 15,
+    "fields": {
+      "timestamp": "2026-06-15T08:52:00Z",
+      "temperature": 29.06,
+      "humidity": 81.15,
+      "water_depth": 60.88,
+      "rain_volume": 0,
+      "wind_speed": 0.52,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 16,
+    "fields": {
+      "timestamp": "2026-06-15T09:30:00Z",
+      "temperature": 30.16,
+      "humidity": 77.52,
+      "water_depth": 62.41,
+      "rain_volume": 0,
+      "wind_speed": 11.22,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 17,
+    "fields": {
+      "timestamp": "2026-06-15T10:08:00Z",
+      "temperature": 31.26,
+      "humidity": 77.08,
+      "water_depth": 60.47,
+      "rain_volume": 0,
+      "wind_speed": 7.36,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 18,
+    "fields": {
+      "timestamp": "2026-06-15T10:46:00Z",
+      "temperature": 29.85,
+      "humidity": 75.13,
+      "water_depth": 63.13,
+      "rain_volume": 0,
+      "wind_speed": 2.1,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 19,
+    "fields": {
+      "timestamp": "2026-06-15T11:24:00Z",
+      "temperature": 31.93,
+      "humidity": 75.51,
+      "water_depth": 59.48,
+      "rain_volume": 1.02,
+      "wind_speed": 0.45,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 20,
+    "fields": {
+      "timestamp": "2026-06-15T12:02:00Z",
+      "temperature": 30.02,
+      "humidity": 74.69,
+      "water_depth": 57.18,
+      "rain_volume": 1.04,
+      "wind_speed": 2.28,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 21,
+    "fields": {
+      "timestamp": "2026-06-15T12:40:00Z",
+      "temperature": 30.92,
+      "humidity": 77.34,
+      "water_depth": 62.93,
+      "rain_volume": 0,
+      "wind_speed": 0.15,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 22,
+    "fields": {
+      "timestamp": "2026-06-15T13:18:00Z",
+      "temperature": 31.16,
+      "humidity": 75.85,
+      "water_depth": 58.25,
+      "rain_volume": 0,
+      "wind_speed": 0.06,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 23,
+    "fields": {
+      "timestamp": "2026-06-15T13:56:00Z",
+      "temperature": 31.0,
+      "humidity": 76.02,
+      "water_depth": 58.84,
+      "rain_volume": 0,
+      "wind_speed": 0.6,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 24,
+    "fields": {
+      "timestamp": "2026-06-15T14:34:00Z",
+      "temperature": 30.15,
+      "humidity": 75.52,
+      "water_depth": 54.65,
+      "rain_volume": 0,
+      "wind_speed": 1.24,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 25,
+    "fields": {
+      "timestamp": "2026-06-15T15:12:00Z",
+      "temperature": 29.72,
+      "humidity": 76.95,
+      "water_depth": 55.38,
+      "rain_volume": 0,
+      "wind_speed": 4.05,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 26,
+    "fields": {
+      "timestamp": "2026-06-15T15:50:00Z",
+      "temperature": 29.58,
+      "humidity": 77.06,
+      "water_depth": 56.69,
+      "rain_volume": 0,
+      "wind_speed": 2.6,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 3.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 27,
+    "fields": {
+      "timestamp": "2026-06-15T16:28:00Z",
+      "temperature": 28.71,
+      "humidity": 80.79,
+      "water_depth": 53.37,
+      "rain_volume": 0,
+      "wind_speed": 2.72,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 2.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 28,
+    "fields": {
+      "timestamp": "2026-06-15T17:06:00Z",
+      "temperature": 28.46,
+      "humidity": 81.57,
+      "water_depth": 55.92,
+      "rain_volume": 0,
+      "wind_speed": 1.11,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 29,
+    "fields": {
+      "timestamp": "2026-06-15T17:44:00Z",
+      "temperature": 28.21,
+      "humidity": 82.99,
+      "water_depth": 53.97,
+      "rain_volume": 0,
+      "wind_speed": 0.85,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 30,
+    "fields": {
+      "timestamp": "2026-06-15T18:22:00Z",
+      "temperature": 26.65,
+      "humidity": 89.15,
+      "water_depth": 54.42,
+      "rain_volume": 0,
+      "wind_speed": 0.93,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 3.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 31,
+    "fields": {
+      "timestamp": "2026-06-15T19:00:00Z",
+      "temperature": 26.41,
+      "humidity": 89.33,
+      "water_depth": 53.97,
+      "rain_volume": 0,
+      "wind_speed": 8.79,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 32,
+    "fields": {
+      "timestamp": "2026-06-15T19:38:00Z",
+      "temperature": 26.12,
+      "humidity": 86.94,
+      "water_depth": 58.87,
+      "rain_volume": 0,
+      "wind_speed": 0.08,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 33,
+    "fields": {
+      "timestamp": "2026-06-15T20:16:00Z",
+      "temperature": 25.41,
+      "humidity": 92.4,
+      "water_depth": 55.64,
+      "rain_volume": 0,
+      "wind_speed": 4.04,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 34,
+    "fields": {
+      "timestamp": "2026-06-15T20:54:00Z",
+      "temperature": 25.31,
+      "humidity": 89.18,
+      "water_depth": 53.55,
+      "rain_volume": 0,
+      "wind_speed": 1.73,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 2.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 35,
+    "fields": {
+      "timestamp": "2026-06-15T21:32:00Z",
+      "temperature": 23.76,
+      "humidity": 87.99,
+      "water_depth": 58.11,
+      "rain_volume": 0,
+      "wind_speed": 1.15,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 36,
+    "fields": {
+      "timestamp": "2026-06-15T22:10:00Z",
+      "temperature": 23.26,
+      "humidity": 91.64,
+      "water_depth": 55.06,
+      "rain_volume": 0,
+      "wind_speed": 2.58,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 3.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 37,
+    "fields": {
+      "timestamp": "2026-06-15T22:48:00Z",
+      "temperature": 23.91,
+      "humidity": 89.92,
+      "water_depth": 57.92,
+      "rain_volume": 0,
+      "wind_speed": 1.33,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 4.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 38,
+    "fields": {
+      "timestamp": "2026-06-15T23:26:00Z",
+      "temperature": 23.44,
+      "humidity": 93.96,
+      "water_depth": 54.79,
+      "rain_volume": 0,
+      "wind_speed": 4.13,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 3.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 39,
+    "fields": {
+      "timestamp": "2026-06-16T00:04:00Z",
+      "temperature": 22.99,
+      "humidity": 95.04,
+      "water_depth": 57.34,
+      "rain_volume": 0,
+      "wind_speed": 4.62,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 40,
+    "fields": {
+      "timestamp": "2026-06-16T00:42:00Z",
+      "temperature": 23.06,
+      "humidity": 98.35,
+      "water_depth": 60.39,
+      "rain_volume": 0,
+      "wind_speed": 1.1,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 5.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 41,
+    "fields": {
+      "timestamp": "2026-06-16T01:20:00Z",
+      "temperature": 23.78,
+      "humidity": 95.31,
+      "water_depth": 62.77,
+      "rain_volume": 0,
+      "wind_speed": 0.65,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 42,
+    "fields": {
+      "timestamp": "2026-06-16T01:58:00Z",
+      "temperature": 22.84,
+      "humidity": 94.22,
+      "water_depth": 61.64,
+      "rain_volume": 0.01,
+      "wind_speed": 1.79,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 43,
+    "fields": {
+      "timestamp": "2026-06-16T02:36:00Z",
+      "temperature": 23.81,
+      "humidity": 95.32,
+      "water_depth": 62.27,
+      "rain_volume": 0,
+      "wind_speed": 4.87,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 44,
+    "fields": {
+      "timestamp": "2026-06-16T03:14:00Z",
+      "temperature": 24.07,
+      "humidity": 87.65,
+      "water_depth": 62.93,
+      "rain_volume": 0,
+      "wind_speed": 0.47,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 45,
+    "fields": {
+      "timestamp": "2026-06-16T03:52:00Z",
+      "temperature": 24.06,
+      "humidity": 92.54,
+      "water_depth": 60.58,
+      "rain_volume": 0,
+      "wind_speed": 1.95,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 46,
+    "fields": {
+      "timestamp": "2026-06-16T04:30:00Z",
+      "temperature": 25.55,
+      "humidity": 91.54,
+      "water_depth": 62.89,
+      "rain_volume": 0,
+      "wind_speed": 2.0,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 47,
+    "fields": {
+      "timestamp": "2026-06-16T05:08:00Z",
+      "temperature": 26.38,
+      "humidity": 84.63,
+      "water_depth": 63.91,
+      "rain_volume": 0,
+      "wind_speed": 2.64,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 6.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 48,
+    "fields": {
+      "timestamp": "2026-06-16T05:46:00Z",
+      "temperature": 26.37,
+      "humidity": 89.88,
+      "water_depth": 66.94,
+      "rain_volume": 0,
+      "wind_speed": 0.28,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 7.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 49,
+    "fields": {
+      "timestamp": "2026-06-16T06:24:00Z",
+      "temperature": 27.65,
+      "humidity": 85.68,
+      "water_depth": 65.69,
+      "rain_volume": 0,
+      "wind_speed": 2.52,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 6.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 50,
+    "fields": {
+      "timestamp": "2026-06-16T07:02:00Z",
+      "temperature": 28.05,
+      "humidity": 81.58,
+      "water_depth": 61.3,
+      "rain_volume": 0.27,
+      "wind_speed": 4.79,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 51,
+    "fields": {
+      "timestamp": "2026-06-16T07:40:00Z",
+      "temperature": 28.38,
+      "humidity": 83.68,
+      "water_depth": 65.48,
+      "rain_volume": 0,
+      "wind_speed": 0.4,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 52,
+    "fields": {
+      "timestamp": "2026-06-16T08:18:00Z",
+      "temperature": 28.84,
+      "humidity": 84.54,
+      "water_depth": 63.56,
+      "rain_volume": 0,
+      "wind_speed": 0.54,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 6.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 53,
+    "fields": {
+      "timestamp": "2026-06-16T08:56:00Z",
+      "temperature": 29.16,
+      "humidity": 80.36,
+      "water_depth": 62.98,
+      "rain_volume": 0,
+      "wind_speed": 7.11,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 54,
+    "fields": {
+      "timestamp": "2026-06-16T09:34:00Z",
+      "temperature": 29.76,
+      "humidity": 78.43,
+      "water_depth": 64.76,
+      "rain_volume": 0,
+      "wind_speed": 0.4,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 6.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 55,
+    "fields": {
+      "timestamp": "2026-06-16T10:12:00Z",
+      "temperature": 30.51,
+      "humidity": 75.42,
+      "water_depth": 64.56,
+      "rain_volume": 0,
+      "wind_speed": 3.85,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 6.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 56,
+    "fields": {
+      "timestamp": "2026-06-16T10:50:00Z",
+      "temperature": 30.76,
+      "humidity": 74.64,
+      "water_depth": 64.36,
+      "rain_volume": 0,
+      "wind_speed": 1.36,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 6.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 57,
+    "fields": {
+      "timestamp": "2026-06-16T11:28:00Z",
+      "temperature": 30.45,
+      "humidity": 77.0,
+      "water_depth": 59.62,
+      "rain_volume": 0,
+      "wind_speed": 0.57,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 58,
+    "fields": {
+      "timestamp": "2026-06-16T12:06:00Z",
+      "temperature": 32.05,
+      "humidity": 73.29,
+      "water_depth": 59.38,
+      "rain_volume": 0,
+      "wind_speed": 4.09,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 59,
+    "fields": {
+      "timestamp": "2026-06-16T12:44:00Z",
+      "temperature": 30.5,
+      "humidity": 75.14,
+      "water_depth": 60.66,
+      "rain_volume": 0,
+      "wind_speed": 1.18,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 60,
+    "fields": {
+      "timestamp": "2026-06-16T13:22:00Z",
+      "temperature": 30.26,
+      "humidity": 74.39,
+      "water_depth": 60.66,
+      "rain_volume": 0,
+      "wind_speed": 1.45,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 61,
+    "fields": {
+      "timestamp": "2026-06-16T14:00:00Z",
+      "temperature": 31.04,
+      "humidity": 77.3,
+      "water_depth": 56.54,
+      "rain_volume": 0,
+      "wind_speed": 0.89,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 62,
+    "fields": {
+      "timestamp": "2026-06-16T14:38:00Z",
+      "temperature": 30.86,
+      "humidity": 77.01,
+      "water_depth": 57.13,
+      "rain_volume": 0,
+      "wind_speed": 1.8,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 4.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 63,
+    "fields": {
+      "timestamp": "2026-06-16T15:16:00Z",
+      "temperature": 30.14,
+      "humidity": 80.0,
+      "water_depth": 54.25,
+      "rain_volume": 0,
+      "wind_speed": 0.36,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 3.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 64,
+    "fields": {
+      "timestamp": "2026-06-16T15:54:00Z",
+      "temperature": 30.14,
+      "humidity": 76.91,
+      "water_depth": 54.07,
+      "rain_volume": 0,
+      "wind_speed": 0.99,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 65,
+    "fields": {
+      "timestamp": "2026-06-16T16:32:00Z",
+      "temperature": 28.99,
+      "humidity": 79.46,
+      "water_depth": 57.29,
+      "rain_volume": 0,
+      "wind_speed": 6.97,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 66,
+    "fields": {
+      "timestamp": "2026-06-16T17:10:00Z",
+      "temperature": 27.59,
+      "humidity": 80.45,
+      "water_depth": 57.88,
+      "rain_volume": 0,
+      "wind_speed": 0.6,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 67,
+    "fields": {
+      "timestamp": "2026-06-16T17:48:00Z",
+      "temperature": 28.07,
+      "humidity": 81.52,
+      "water_depth": 55.03,
+      "rain_volume": 0,
+      "wind_speed": 2.14,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 3.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 68,
+    "fields": {
+      "timestamp": "2026-06-16T18:26:00Z",
+      "temperature": 26.66,
+      "humidity": 85.75,
+      "water_depth": 57.01,
+      "rain_volume": 1.74,
+      "wind_speed": 0.79,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 4.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 69,
+    "fields": {
+      "timestamp": "2026-06-16T19:04:00Z",
+      "temperature": 26.45,
+      "humidity": 89.1,
+      "water_depth": 55.89,
+      "rain_volume": 0,
+      "wind_speed": 2.97,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 70,
+    "fields": {
+      "timestamp": "2026-06-16T19:42:00Z",
+      "temperature": 25.89,
+      "humidity": 85.74,
+      "water_depth": 53.88,
+      "rain_volume": 0,
+      "wind_speed": 0.28,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 71,
+    "fields": {
+      "timestamp": "2026-06-16T20:20:00Z",
+      "temperature": 24.59,
+      "humidity": 91.74,
+      "water_depth": 56.39,
+      "rain_volume": 0,
+      "wind_speed": 7.0,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 72,
+    "fields": {
+      "timestamp": "2026-06-16T20:58:00Z",
+      "temperature": 24.84,
+      "humidity": 92.71,
+      "water_depth": 58.75,
+      "rain_volume": 0,
+      "wind_speed": 1.21,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 73,
+    "fields": {
+      "timestamp": "2026-06-16T21:36:00Z",
+      "temperature": 24.38,
+      "humidity": 92.9,
+      "water_depth": 56.39,
+      "rain_volume": 0,
+      "wind_speed": 0.54,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 74,
+    "fields": {
+      "timestamp": "2026-06-16T22:14:00Z",
+      "temperature": 23.25,
+      "humidity": 97.41,
+      "water_depth": 60.63,
+      "rain_volume": 0,
+      "wind_speed": 0.15,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 75,
+    "fields": {
+      "timestamp": "2026-06-16T22:52:00Z",
+      "temperature": 23.12,
+      "humidity": 92.11,
+      "water_depth": 52.26,
+      "rain_volume": 0,
+      "wind_speed": 0.37,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 2.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 76,
+    "fields": {
+      "timestamp": "2026-06-16T23:30:00Z",
+      "temperature": 23.26,
+      "humidity": 92.17,
+      "water_depth": 60.35,
+      "rain_volume": 0,
+      "wind_speed": 1.47,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 5.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 77,
+    "fields": {
+      "timestamp": "2026-06-17T00:08:00Z",
+      "temperature": 23.12,
+      "humidity": 91.44,
+      "water_depth": 60.17,
+      "rain_volume": 0,
+      "wind_speed": 0.82,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 5.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 78,
+    "fields": {
+      "timestamp": "2026-06-17T00:46:00Z",
+      "temperature": 22.75,
+      "humidity": 97.99,
+      "water_depth": 59.4,
+      "rain_volume": 0,
+      "wind_speed": 3.53,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 79,
+    "fields": {
+      "timestamp": "2026-06-17T01:24:00Z",
+      "temperature": 22.9,
+      "humidity": 95.97,
+      "water_depth": 61.48,
+      "rain_volume": 0,
+      "wind_speed": 1.13,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 80,
+    "fields": {
+      "timestamp": "2026-06-17T02:02:00Z",
+      "temperature": 23.65,
+      "humidity": 93.55,
+      "water_depth": 58.52,
+      "rain_volume": 0,
+      "wind_speed": 0.57,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 4.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 81,
+    "fields": {
+      "timestamp": "2026-06-17T02:40:00Z",
+      "temperature": 22.81,
+      "humidity": 94.22,
+      "water_depth": 62.06,
+      "rain_volume": 0,
+      "wind_speed": 1.92,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 82,
+    "fields": {
+      "timestamp": "2026-06-17T03:18:00Z",
+      "temperature": 23.47,
+      "humidity": 89.82,
+      "water_depth": 64.25,
+      "rain_volume": 0,
+      "wind_speed": 2.45,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 83,
+    "fields": {
+      "timestamp": "2026-06-17T03:56:00Z",
+      "temperature": 23.81,
+      "humidity": 96.96,
+      "water_depth": 66.49,
+      "rain_volume": 1.05,
+      "wind_speed": 0.37,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 7.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 84,
+    "fields": {
+      "timestamp": "2026-06-17T04:34:00Z",
+      "temperature": 24.89,
+      "humidity": 90.26,
+      "water_depth": 63.29,
+      "rain_volume": 0,
+      "wind_speed": 0.37,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 6.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 85,
+    "fields": {
+      "timestamp": "2026-06-17T05:12:00Z",
+      "temperature": 26.12,
+      "humidity": 87.81,
+      "water_depth": 63.21,
+      "rain_volume": 0,
+      "wind_speed": 0.07,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 6.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 86,
+    "fields": {
+      "timestamp": "2026-06-17T05:50:00Z",
+      "temperature": 26.7,
+      "humidity": 89.04,
+      "water_depth": 63.83,
+      "rain_volume": 0,
+      "wind_speed": 2.67,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 6.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 87,
+    "fields": {
+      "timestamp": "2026-06-17T06:28:00Z",
+      "temperature": 27.43,
+      "humidity": 85.96,
+      "water_depth": 66.83,
+      "rain_volume": 9.35,
+      "wind_speed": 2.18,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 7.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 88,
+    "fields": {
+      "timestamp": "2026-06-17T07:06:00Z",
+      "temperature": 27.96,
+      "humidity": 82.86,
+      "water_depth": 65.49,
+      "rain_volume": 5.94,
+      "wind_speed": 1.29,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 89,
+    "fields": {
+      "timestamp": "2026-06-17T07:44:00Z",
+      "temperature": 28.03,
+      "humidity": 80.83,
+      "water_depth": 63.77,
+      "rain_volume": 4.97,
+      "wind_speed": 3.72,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 90,
+    "fields": {
+      "timestamp": "2026-06-17T08:22:00Z",
+      "temperature": 28.5,
+      "humidity": 80.94,
+      "water_depth": 65.36,
+      "rain_volume": 3.19,
+      "wind_speed": 3.28,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 91,
+    "fields": {
+      "timestamp": "2026-06-17T09:00:00Z",
+      "temperature": 29.82,
+      "humidity": 81.69,
+      "water_depth": 123.73,
+      "rain_volume": 2.4,
+      "wind_speed": 1.76,
+      "wind_direction": "S",
+      "flood_risk": "warning",
+      "flood_probability": 26.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 92,
+    "fields": {
+      "timestamp": "2026-06-17T09:38:00Z",
+      "temperature": 29.68,
+      "humidity": 80.62,
+      "water_depth": 125.47,
+      "rain_volume": 0.27,
+      "wind_speed": 4.05,
+      "wind_direction": "SE",
+      "flood_risk": "warning",
+      "flood_probability": 26.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 93,
+    "fields": {
+      "timestamp": "2026-06-17T10:16:00Z",
+      "temperature": 30.63,
+      "humidity": 79.53,
+      "water_depth": 165.02,
+      "rain_volume": 1.58,
+      "wind_speed": 0.46,
+      "wind_direction": "NNW",
+      "flood_risk": "flood",
+      "flood_probability": 40.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 94,
+    "fields": {
+      "timestamp": "2026-06-17T10:54:00Z",
+      "temperature": 30.05,
+      "humidity": 75.32,
+      "water_depth": 165.77,
+      "rain_volume": 1.4,
+      "wind_speed": 0.24,
+      "wind_direction": "WSW",
+      "flood_risk": "flood",
+      "flood_probability": 40.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 95,
+    "fields": {
+      "timestamp": "2026-06-17T11:32:00Z",
+      "temperature": 31.12,
+      "humidity": 73.36,
+      "water_depth": 180.51,
+      "rain_volume": 0.9,
+      "wind_speed": 0.63,
+      "wind_direction": "N",
+      "flood_risk": "flood",
+      "flood_probability": 45.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 96,
+    "fields": {
+      "timestamp": "2026-06-17T12:10:00Z",
+      "temperature": 31.77,
+      "humidity": 74.75,
+      "water_depth": 161.0,
+      "rain_volume": 3.86,
+      "wind_speed": 0.12,
+      "wind_direction": "NNW",
+      "flood_risk": "flood",
+      "flood_probability": 38.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 97,
+    "fields": {
+      "timestamp": "2026-06-17T12:48:00Z",
+      "temperature": 30.95,
+      "humidity": 75.11,
+      "water_depth": 164.52,
+      "rain_volume": 2.05,
+      "wind_speed": 1.52,
+      "wind_direction": "WSW",
+      "flood_risk": "flood",
+      "flood_probability": 39.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 98,
+    "fields": {
+      "timestamp": "2026-06-17T13:26:00Z",
+      "temperature": 31.06,
+      "humidity": 77.53,
+      "water_depth": 119.23,
+      "rain_volume": 0.25,
+      "wind_speed": 5.52,
+      "wind_direction": "SSE",
+      "flood_risk": "warning",
+      "flood_probability": 24.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 99,
+    "fields": {
+      "timestamp": "2026-06-17T14:04:00Z",
+      "temperature": 30.81,
+      "humidity": 72.95,
+      "water_depth": 57.51,
+      "rain_volume": 0.75,
+      "wind_speed": 0.08,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 100,
+    "fields": {
+      "timestamp": "2026-06-17T14:42:00Z",
+      "temperature": 30.26,
+      "humidity": 79.4,
+      "water_depth": 57.03,
+      "rain_volume": 3.45,
+      "wind_speed": 0.26,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 4.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 101,
+    "fields": {
+      "timestamp": "2026-06-17T15:20:00Z",
+      "temperature": 29.94,
+      "humidity": 77.61,
+      "water_depth": 53.63,
+      "rain_volume": 0.24,
+      "wind_speed": 1.2,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 2.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 102,
+    "fields": {
+      "timestamp": "2026-06-17T15:58:00Z",
+      "temperature": 29.83,
+      "humidity": 77.08,
+      "water_depth": 55.62,
+      "rain_volume": 5.72,
+      "wind_speed": 5.43,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 103,
+    "fields": {
+      "timestamp": "2026-06-17T16:36:00Z",
+      "temperature": 29.05,
+      "humidity": 77.98,
+      "water_depth": 54.98,
+      "rain_volume": 2.05,
+      "wind_speed": 0.76,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 3.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 104,
+    "fields": {
+      "timestamp": "2026-06-17T17:14:00Z",
+      "temperature": 27.65,
+      "humidity": 79.1,
+      "water_depth": 53.57,
+      "rain_volume": 0,
+      "wind_speed": 1.42,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 2.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 105,
+    "fields": {
+      "timestamp": "2026-06-17T17:52:00Z",
+      "temperature": 28.05,
+      "humidity": 84.06,
+      "water_depth": 54.85,
+      "rain_volume": 0,
+      "wind_speed": 0.08,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 3.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 106,
+    "fields": {
+      "timestamp": "2026-06-17T18:30:00Z",
+      "temperature": 27.25,
+      "humidity": 85.15,
+      "water_depth": 55.81,
+      "rain_volume": 0,
+      "wind_speed": 0.32,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 107,
+    "fields": {
+      "timestamp": "2026-06-17T19:08:00Z",
+      "temperature": 26.69,
+      "humidity": 85.01,
+      "water_depth": 58.94,
+      "rain_volume": 0,
+      "wind_speed": 8.63,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 108,
+    "fields": {
+      "timestamp": "2026-06-17T19:46:00Z",
+      "temperature": 26.44,
+      "humidity": 85.0,
+      "water_depth": 55.52,
+      "rain_volume": 0,
+      "wind_speed": 6.71,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 109,
+    "fields": {
+      "timestamp": "2026-06-17T20:24:00Z",
+      "temperature": 26.08,
+      "humidity": 89.33,
+      "water_depth": 56.18,
+      "rain_volume": 0,
+      "wind_speed": 0.01,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 3.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 110,
+    "fields": {
+      "timestamp": "2026-06-17T21:02:00Z",
+      "temperature": 23.79,
+      "humidity": 95.41,
+      "water_depth": 56.32,
+      "rain_volume": 0,
+      "wind_speed": 6.07,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 111,
+    "fields": {
+      "timestamp": "2026-06-17T21:40:00Z",
+      "temperature": 24.61,
+      "humidity": 91.55,
+      "water_depth": 52.63,
+      "rain_volume": 0,
+      "wind_speed": 2.04,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 2.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 112,
+    "fields": {
+      "timestamp": "2026-06-17T22:18:00Z",
+      "temperature": 23.63,
+      "humidity": 90.65,
+      "water_depth": 57.45,
+      "rain_volume": 0,
+      "wind_speed": 4.05,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 113,
+    "fields": {
+      "timestamp": "2026-06-17T22:56:00Z",
+      "temperature": 24.63,
+      "humidity": 93.17,
+      "water_depth": 57.62,
+      "rain_volume": 0,
+      "wind_speed": 1.21,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 114,
+    "fields": {
+      "timestamp": "2026-06-17T23:34:00Z",
+      "temperature": 22.73,
+      "humidity": 94.11,
+      "water_depth": 63.63,
+      "rain_volume": 0,
+      "wind_speed": 1.45,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 6.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 115,
+    "fields": {
+      "timestamp": "2026-06-18T00:12:00Z",
+      "temperature": 22.58,
+      "humidity": 89.61,
+      "water_depth": 59.62,
+      "rain_volume": 0,
+      "wind_speed": 1.34,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 116,
+    "fields": {
+      "timestamp": "2026-06-18T00:50:00Z",
+      "temperature": 22.7,
+      "humidity": 94.89,
+      "water_depth": 60.6,
+      "rain_volume": 0,
+      "wind_speed": 2.2,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 117,
+    "fields": {
+      "timestamp": "2026-06-18T01:28:00Z",
+      "temperature": 22.07,
+      "humidity": 94.2,
+      "water_depth": 61.22,
+      "rain_volume": 0,
+      "wind_speed": 0.3,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 5.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 118,
+    "fields": {
+      "timestamp": "2026-06-18T02:06:00Z",
+      "temperature": 23.27,
+      "humidity": 95.05,
+      "water_depth": 60.16,
+      "rain_volume": 0,
+      "wind_speed": 0.06,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 119,
+    "fields": {
+      "timestamp": "2026-06-18T02:44:00Z",
+      "temperature": 23.16,
+      "humidity": 97.36,
+      "water_depth": 64.79,
+      "rain_volume": 0,
+      "wind_speed": 0.74,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 120,
+    "fields": {
+      "timestamp": "2026-06-18T03:22:00Z",
+      "temperature": 24.25,
+      "humidity": 94.32,
+      "water_depth": 65.04,
+      "rain_volume": 0,
+      "wind_speed": 2.44,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 121,
+    "fields": {
+      "timestamp": "2026-06-18T04:00:00Z",
+      "temperature": 25.17,
+      "humidity": 89.46,
+      "water_depth": 65.91,
+      "rain_volume": 0,
+      "wind_speed": 0.45,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 7.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 122,
+    "fields": {
+      "timestamp": "2026-06-18T04:38:00Z",
+      "temperature": 25.94,
+      "humidity": 87.79,
+      "water_depth": 62.51,
+      "rain_volume": 0,
+      "wind_speed": 2.24,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 123,
+    "fields": {
+      "timestamp": "2026-06-18T05:16:00Z",
+      "temperature": 26.44,
+      "humidity": 92.73,
+      "water_depth": 67.64,
+      "rain_volume": 0,
+      "wind_speed": 7.01,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 7.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 124,
+    "fields": {
+      "timestamp": "2026-06-18T05:54:00Z",
+      "temperature": 25.68,
+      "humidity": 87.71,
+      "water_depth": 62.03,
+      "rain_volume": 0,
+      "wind_speed": 0.2,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 125,
+    "fields": {
+      "timestamp": "2026-06-18T06:32:00Z",
+      "temperature": 26.55,
+      "humidity": 85.03,
+      "water_depth": 66.17,
+      "rain_volume": 0.87,
+      "wind_speed": 2.23,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 7.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 126,
+    "fields": {
+      "timestamp": "2026-06-18T07:10:00Z",
+      "temperature": 28.28,
+      "humidity": 82.36,
+      "water_depth": 69.21,
+      "rain_volume": 0,
+      "wind_speed": 1.17,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 8.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 127,
+    "fields": {
+      "timestamp": "2026-06-18T07:48:00Z",
+      "temperature": 27.38,
+      "humidity": 82.81,
+      "water_depth": 62.85,
+      "rain_volume": 0,
+      "wind_speed": 4.05,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 128,
+    "fields": {
+      "timestamp": "2026-06-18T08:26:00Z",
+      "temperature": 29.92,
+      "humidity": 79.71,
+      "water_depth": 63.2,
+      "rain_volume": 0,
+      "wind_speed": 0.39,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 129,
+    "fields": {
+      "timestamp": "2026-06-18T09:04:00Z",
+      "temperature": 30.42,
+      "humidity": 76.78,
+      "water_depth": 63.73,
+      "rain_volume": 0,
+      "wind_speed": 2.36,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 130,
+    "fields": {
+      "timestamp": "2026-06-18T09:42:00Z",
+      "temperature": 29.59,
+      "humidity": 76.84,
+      "water_depth": 62.53,
+      "rain_volume": 0,
+      "wind_speed": 3.64,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 131,
+    "fields": {
+      "timestamp": "2026-06-18T10:20:00Z",
+      "temperature": 29.61,
+      "humidity": 76.27,
+      "water_depth": 59.4,
+      "rain_volume": 0,
+      "wind_speed": 5.79,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 132,
+    "fields": {
+      "timestamp": "2026-06-18T10:58:00Z",
+      "temperature": 31.14,
+      "humidity": 75.25,
+      "water_depth": 62.64,
+      "rain_volume": 0,
+      "wind_speed": 2.3,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 133,
+    "fields": {
+      "timestamp": "2026-06-18T11:36:00Z",
+      "temperature": 30.81,
+      "humidity": 73.92,
+      "water_depth": 59.17,
+      "rain_volume": 0.17,
+      "wind_speed": 1.38,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 4.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 134,
+    "fields": {
+      "timestamp": "2026-06-18T12:14:00Z",
+      "temperature": 31.62,
+      "humidity": 75.21,
+      "water_depth": 60.95,
+      "rain_volume": 0,
+      "wind_speed": 1.92,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 135,
+    "fields": {
+      "timestamp": "2026-06-18T12:52:00Z",
+      "temperature": 30.2,
+      "humidity": 74.49,
+      "water_depth": 58.16,
+      "rain_volume": 0,
+      "wind_speed": 4.06,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 136,
+    "fields": {
+      "timestamp": "2026-06-18T13:30:00Z",
+      "temperature": 30.56,
+      "humidity": 78.35,
+      "water_depth": 61.81,
+      "rain_volume": 0,
+      "wind_speed": 1.69,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 5.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 137,
+    "fields": {
+      "timestamp": "2026-06-18T14:08:00Z",
+      "temperature": 30.47,
+      "humidity": 71.04,
+      "water_depth": 55.93,
+      "rain_volume": 0,
+      "wind_speed": 0.06,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 138,
+    "fields": {
+      "timestamp": "2026-06-18T14:46:00Z",
+      "temperature": 30.49,
+      "humidity": 78.52,
+      "water_depth": 56.86,
+      "rain_volume": 0,
+      "wind_speed": 5.35,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 4.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 139,
+    "fields": {
+      "timestamp": "2026-06-18T15:24:00Z",
+      "temperature": 29.6,
+      "humidity": 80.42,
+      "water_depth": 58.09,
+      "rain_volume": 0,
+      "wind_speed": 2.34,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 140,
+    "fields": {
+      "timestamp": "2026-06-18T16:02:00Z",
+      "temperature": 29.31,
+      "humidity": 75.85,
+      "water_depth": 53.21,
+      "rain_volume": 0,
+      "wind_speed": 2.26,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 2.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 141,
+    "fields": {
+      "timestamp": "2026-06-18T16:40:00Z",
+      "temperature": 28.47,
+      "humidity": 79.31,
+      "water_depth": 56.12,
+      "rain_volume": 0,
+      "wind_speed": 0.49,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 3.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 142,
+    "fields": {
+      "timestamp": "2026-06-18T17:18:00Z",
+      "temperature": 27.96,
+      "humidity": 81.67,
+      "water_depth": 57.78,
+      "rain_volume": 0,
+      "wind_speed": 2.15,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 143,
+    "fields": {
+      "timestamp": "2026-06-18T17:56:00Z",
+      "temperature": 28.1,
+      "humidity": 79.6,
+      "water_depth": 51.96,
+      "rain_volume": 0,
+      "wind_speed": 1.0,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 2.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 144,
+    "fields": {
+      "timestamp": "2026-06-18T18:34:00Z",
+      "temperature": 27.26,
+      "humidity": 83.44,
+      "water_depth": 55.37,
+      "rain_volume": 0,
+      "wind_speed": 2.11,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 145,
+    "fields": {
+      "timestamp": "2026-06-18T19:12:00Z",
+      "temperature": 26.32,
+      "humidity": 85.37,
+      "water_depth": 55.69,
+      "rain_volume": 0,
+      "wind_speed": 0.23,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 146,
+    "fields": {
+      "timestamp": "2026-06-18T19:50:00Z",
+      "temperature": 25.4,
+      "humidity": 91.09,
+      "water_depth": 56.73,
+      "rain_volume": 0,
+      "wind_speed": 2.14,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 3.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 147,
+    "fields": {
+      "timestamp": "2026-06-18T20:28:00Z",
+      "temperature": 24.23,
+      "humidity": 91.87,
+      "water_depth": 53.2,
+      "rain_volume": 0,
+      "wind_speed": 14.88,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 2.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 148,
+    "fields": {
+      "timestamp": "2026-06-18T21:06:00Z",
+      "temperature": 24.81,
+      "humidity": 94.61,
+      "water_depth": 53.82,
+      "rain_volume": 0,
+      "wind_speed": 0.1,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 2.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 149,
+    "fields": {
+      "timestamp": "2026-06-18T21:44:00Z",
+      "temperature": 24.34,
+      "humidity": 93.51,
+      "water_depth": 57.51,
+      "rain_volume": 0,
+      "wind_speed": 7.56,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 150,
+    "fields": {
+      "timestamp": "2026-06-18T22:22:00Z",
+      "temperature": 23.16,
+      "humidity": 91.4,
+      "water_depth": 58.09,
+      "rain_volume": 0,
+      "wind_speed": 1.04,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 151,
+    "fields": {
+      "timestamp": "2026-06-18T23:00:00Z",
+      "temperature": 23.91,
+      "humidity": 93.61,
+      "water_depth": 59.21,
+      "rain_volume": 0.18,
+      "wind_speed": 4.09,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 4.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 152,
+    "fields": {
+      "timestamp": "2026-06-18T23:38:00Z",
+      "temperature": 23.19,
+      "humidity": 95.64,
+      "water_depth": 59.4,
+      "rain_volume": 0,
+      "wind_speed": 3.05,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 153,
+    "fields": {
+      "timestamp": "2026-06-19T00:16:00Z",
+      "temperature": 23.59,
+      "humidity": 92.56,
+      "water_depth": 58.64,
+      "rain_volume": 0.44,
+      "wind_speed": 1.67,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 154,
+    "fields": {
+      "timestamp": "2026-06-19T00:54:00Z",
+      "temperature": 23.03,
+      "humidity": 96.43,
+      "water_depth": 60.46,
+      "rain_volume": 0,
+      "wind_speed": 2.68,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 155,
+    "fields": {
+      "timestamp": "2026-06-19T01:32:00Z",
+      "temperature": 24.17,
+      "humidity": 94.18,
+      "water_depth": 61.88,
+      "rain_volume": 0,
+      "wind_speed": 4.22,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 5.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 156,
+    "fields": {
+      "timestamp": "2026-06-19T02:10:00Z",
+      "temperature": 24.41,
+      "humidity": 92.91,
+      "water_depth": 61.07,
+      "rain_volume": 1.03,
+      "wind_speed": 1.04,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 5.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 157,
+    "fields": {
+      "timestamp": "2026-06-19T02:48:00Z",
+      "temperature": 23.41,
+      "humidity": 95.08,
+      "water_depth": 66.23,
+      "rain_volume": 0,
+      "wind_speed": 0.79,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 7.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 158,
+    "fields": {
+      "timestamp": "2026-06-19T03:26:00Z",
+      "temperature": 24.66,
+      "humidity": 92.96,
+      "water_depth": 64.48,
+      "rain_volume": 0,
+      "wind_speed": 2.2,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 159,
+    "fields": {
+      "timestamp": "2026-06-19T04:04:00Z",
+      "temperature": 25.32,
+      "humidity": 89.28,
+      "water_depth": 61.95,
+      "rain_volume": 0,
+      "wind_speed": 3.3,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 160,
+    "fields": {
+      "timestamp": "2026-06-19T04:42:00Z",
+      "temperature": 25.68,
+      "humidity": 92.32,
+      "water_depth": 65.64,
+      "rain_volume": 0,
+      "wind_speed": 2.87,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 6.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 161,
+    "fields": {
+      "timestamp": "2026-06-19T05:20:00Z",
+      "temperature": 25.48,
+      "humidity": 85.43,
+      "water_depth": 62.88,
+      "rain_volume": 0,
+      "wind_speed": 3.2,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 162,
+    "fields": {
+      "timestamp": "2026-06-19T05:58:00Z",
+      "temperature": 26.31,
+      "humidity": 88.82,
+      "water_depth": 66.4,
+      "rain_volume": 0.01,
+      "wind_speed": 1.14,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 7.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 163,
+    "fields": {
+      "timestamp": "2026-06-19T06:36:00Z",
+      "temperature": 27.53,
+      "humidity": 86.19,
+      "water_depth": 67.32,
+      "rain_volume": 0,
+      "wind_speed": 3.41,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 7.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 164,
+    "fields": {
+      "timestamp": "2026-06-19T07:14:00Z",
+      "temperature": 27.16,
+      "humidity": 81.79,
+      "water_depth": 63.19,
+      "rain_volume": 0,
+      "wind_speed": 0.26,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 6.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 165,
+    "fields": {
+      "timestamp": "2026-06-19T07:52:00Z",
+      "temperature": 27.44,
+      "humidity": 83.06,
+      "water_depth": 66.76,
+      "rain_volume": 0,
+      "wind_speed": 1.57,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 7.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 166,
+    "fields": {
+      "timestamp": "2026-06-19T08:30:00Z",
+      "temperature": 27.98,
+      "humidity": 77.5,
+      "water_depth": 65.16,
+      "rain_volume": 0,
+      "wind_speed": 0.01,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 167,
+    "fields": {
+      "timestamp": "2026-06-19T09:08:00Z",
+      "temperature": 29.69,
+      "humidity": 79.78,
+      "water_depth": 65.18,
+      "rain_volume": 0,
+      "wind_speed": 0.78,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 6.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 168,
+    "fields": {
+      "timestamp": "2026-06-19T09:46:00Z",
+      "temperature": 30.19,
+      "humidity": 77.56,
+      "water_depth": 67.33,
+      "rain_volume": 0,
+      "wind_speed": 0.91,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 7.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 169,
+    "fields": {
+      "timestamp": "2026-06-19T10:24:00Z",
+      "temperature": 31.22,
+      "humidity": 75.29,
+      "water_depth": 62.01,
+      "rain_volume": 0,
+      "wind_speed": 1.01,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 170,
+    "fields": {
+      "timestamp": "2026-06-19T11:02:00Z",
+      "temperature": 30.9,
+      "humidity": 77.44,
+      "water_depth": 59.79,
+      "rain_volume": 0,
+      "wind_speed": 2.38,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 171,
+    "fields": {
+      "timestamp": "2026-06-19T11:40:00Z",
+      "temperature": 31.68,
+      "humidity": 73.93,
+      "water_depth": 59.52,
+      "rain_volume": 0,
+      "wind_speed": 0.98,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 172,
+    "fields": {
+      "timestamp": "2026-06-19T12:18:00Z",
+      "temperature": 30.31,
+      "humidity": 72.18,
+      "water_depth": 58.37,
+      "rain_volume": 0,
+      "wind_speed": 1.19,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 4.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 173,
+    "fields": {
+      "timestamp": "2026-06-19T12:56:00Z",
+      "temperature": 30.15,
+      "humidity": 71.89,
+      "water_depth": 59.85,
+      "rain_volume": 0,
+      "wind_speed": 0.54,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 5.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 174,
+    "fields": {
+      "timestamp": "2026-06-19T13:34:00Z",
+      "temperature": 30.84,
+      "humidity": 76.55,
+      "water_depth": 59.39,
+      "rain_volume": 0,
+      "wind_speed": 0.93,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 175,
+    "fields": {
+      "timestamp": "2026-06-19T14:12:00Z",
+      "temperature": 30.66,
+      "humidity": 73.78,
+      "water_depth": 58.05,
+      "rain_volume": 0,
+      "wind_speed": 0.52,
+      "wind_direction": "SSE",
+      "flood_risk": "safe",
+      "flood_probability": 4.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 176,
+    "fields": {
+      "timestamp": "2026-06-19T14:50:00Z",
+      "temperature": 30.45,
+      "humidity": 79.85,
+      "water_depth": 59.15,
+      "rain_volume": 0.57,
+      "wind_speed": 0.15,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 177,
+    "fields": {
+      "timestamp": "2026-06-19T15:28:00Z",
+      "temperature": 28.79,
+      "humidity": 73.77,
+      "water_depth": 56.49,
+      "rain_volume": 0,
+      "wind_speed": 1.85,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 178,
+    "fields": {
+      "timestamp": "2026-06-19T16:06:00Z",
+      "temperature": 28.96,
+      "humidity": 83.39,
+      "water_depth": 58.58,
+      "rain_volume": 0,
+      "wind_speed": 2.21,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 4.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 179,
+    "fields": {
+      "timestamp": "2026-06-19T16:44:00Z",
+      "temperature": 28.35,
+      "humidity": 80.42,
+      "water_depth": 55.14,
+      "rain_volume": 0,
+      "wind_speed": 1.93,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 3.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 180,
+    "fields": {
+      "timestamp": "2026-06-19T17:22:00Z",
+      "temperature": 28.37,
+      "humidity": 82.22,
+      "water_depth": 60.61,
+      "rain_volume": 0,
+      "wind_speed": 1.25,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 181,
+    "fields": {
+      "timestamp": "2026-06-19T18:00:00Z",
+      "temperature": 27.18,
+      "humidity": 83.91,
+      "water_depth": 56.25,
+      "rain_volume": 0,
+      "wind_speed": 0.96,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 182,
+    "fields": {
+      "timestamp": "2026-06-19T18:38:00Z",
+      "temperature": 26.53,
+      "humidity": 85.8,
+      "water_depth": 53.29,
+      "rain_volume": 0,
+      "wind_speed": 3.98,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 2.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 183,
+    "fields": {
+      "timestamp": "2026-06-19T19:16:00Z",
+      "temperature": 25.71,
+      "humidity": 87.51,
+      "water_depth": 53.03,
+      "rain_volume": 0,
+      "wind_speed": 1.46,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 2.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 184,
+    "fields": {
+      "timestamp": "2026-06-19T19:54:00Z",
+      "temperature": 25.44,
+      "humidity": 89.79,
+      "water_depth": 56.14,
+      "rain_volume": 0,
+      "wind_speed": 1.3,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 185,
+    "fields": {
+      "timestamp": "2026-06-19T20:32:00Z",
+      "temperature": 24.97,
+      "humidity": 90.23,
+      "water_depth": 55.22,
+      "rain_volume": 0,
+      "wind_speed": 0.05,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 3.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 186,
+    "fields": {
+      "timestamp": "2026-06-19T21:10:00Z",
+      "temperature": 24.65,
+      "humidity": 92.37,
+      "water_depth": 57.89,
+      "rain_volume": 0,
+      "wind_speed": 0.83,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 4.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 187,
+    "fields": {
+      "timestamp": "2026-06-19T21:48:00Z",
+      "temperature": 23.68,
+      "humidity": 91.34,
+      "water_depth": 57.41,
+      "rain_volume": 0,
+      "wind_speed": 0.96,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 188,
+    "fields": {
+      "timestamp": "2026-06-19T22:26:00Z",
+      "temperature": 23.79,
+      "humidity": 93.55,
+      "water_depth": 57.35,
+      "rain_volume": 0,
+      "wind_speed": 1.02,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 189,
+    "fields": {
+      "timestamp": "2026-06-19T23:04:00Z",
+      "temperature": 22.87,
+      "humidity": 95.27,
+      "water_depth": 57.01,
+      "rain_volume": 0,
+      "wind_speed": 1.74,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 190,
+    "fields": {
+      "timestamp": "2026-06-19T23:42:00Z",
+      "temperature": 22.74,
+      "humidity": 91.24,
+      "water_depth": 55.68,
+      "rain_volume": 0,
+      "wind_speed": 1.53,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 191,
+    "fields": {
+      "timestamp": "2026-06-20T00:20:00Z",
+      "temperature": 22.95,
+      "humidity": 92.3,
+      "water_depth": 59.11,
+      "rain_volume": 0,
+      "wind_speed": 1.87,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 192,
+    "fields": {
+      "timestamp": "2026-06-20T00:58:00Z",
+      "temperature": 22.48,
+      "humidity": 96.49,
+      "water_depth": 61.71,
+      "rain_volume": 0.53,
+      "wind_speed": 2.9,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 5.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 193,
+    "fields": {
+      "timestamp": "2026-06-20T01:36:00Z",
+      "temperature": 22.86,
+      "humidity": 95.0,
+      "water_depth": 61.72,
+      "rain_volume": 0,
+      "wind_speed": 3.35,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 194,
+    "fields": {
+      "timestamp": "2026-06-20T02:14:00Z",
+      "temperature": 22.94,
+      "humidity": 93.29,
+      "water_depth": 60.01,
+      "rain_volume": 0,
+      "wind_speed": 2.53,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 195,
+    "fields": {
+      "timestamp": "2026-06-20T02:52:00Z",
+      "temperature": 24.52,
+      "humidity": 93.7,
+      "water_depth": 62.85,
+      "rain_volume": 0,
+      "wind_speed": 6.23,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 196,
+    "fields": {
+      "timestamp": "2026-06-20T03:30:00Z",
+      "temperature": 24.19,
+      "humidity": 92.77,
+      "water_depth": 64.31,
+      "rain_volume": 0,
+      "wind_speed": 0.04,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 197,
+    "fields": {
+      "timestamp": "2026-06-20T04:08:00Z",
+      "temperature": 24.65,
+      "humidity": 88.92,
+      "water_depth": 62.56,
+      "rain_volume": 0,
+      "wind_speed": 0.44,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 198,
+    "fields": {
+      "timestamp": "2026-06-20T04:46:00Z",
+      "temperature": 25.11,
+      "humidity": 88.44,
+      "water_depth": 64.64,
+      "rain_volume": 0,
+      "wind_speed": 0.02,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 199,
+    "fields": {
+      "timestamp": "2026-06-20T05:24:00Z",
+      "temperature": 25.91,
+      "humidity": 87.98,
+      "water_depth": 64.95,
+      "rain_volume": 0,
+      "wind_speed": 2.09,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 6.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 200,
+    "fields": {
+      "timestamp": "2026-06-20T06:02:00Z",
+      "temperature": 26.89,
+      "humidity": 83.04,
+      "water_depth": 62.71,
+      "rain_volume": 0,
+      "wind_speed": 4.57,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 201,
+    "fields": {
+      "timestamp": "2026-06-20T06:40:00Z",
+      "temperature": 27.31,
+      "humidity": 85.82,
+      "water_depth": 65.72,
+      "rain_volume": 0,
+      "wind_speed": 0.56,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 6.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 202,
+    "fields": {
+      "timestamp": "2026-06-20T07:18:00Z",
+      "temperature": 28.41,
+      "humidity": 79.01,
+      "water_depth": 65.95,
+      "rain_volume": 0,
+      "wind_speed": 5.24,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 7.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 203,
+    "fields": {
+      "timestamp": "2026-06-20T07:56:00Z",
+      "temperature": 27.77,
+      "humidity": 84.47,
+      "water_depth": 67.0,
+      "rain_volume": 0,
+      "wind_speed": 0.12,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 7.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 204,
+    "fields": {
+      "timestamp": "2026-06-20T08:34:00Z",
+      "temperature": 28.71,
+      "humidity": 80.95,
+      "water_depth": 66.44,
+      "rain_volume": 0,
+      "wind_speed": 5.45,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 7.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 205,
+    "fields": {
+      "timestamp": "2026-06-20T09:12:00Z",
+      "temperature": 29.69,
+      "humidity": 78.44,
+      "water_depth": 60.78,
+      "rain_volume": 1.27,
+      "wind_speed": 0.87,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 206,
+    "fields": {
+      "timestamp": "2026-06-20T09:50:00Z",
+      "temperature": 28.68,
+      "humidity": 79.89,
+      "water_depth": 61.66,
+      "rain_volume": 0,
+      "wind_speed": 0.21,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 5.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 207,
+    "fields": {
+      "timestamp": "2026-06-20T10:28:00Z",
+      "temperature": 29.71,
+      "humidity": 79.67,
+      "water_depth": 63.53,
+      "rain_volume": 0,
+      "wind_speed": 1.33,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 208,
+    "fields": {
+      "timestamp": "2026-06-20T11:06:00Z",
+      "temperature": 31.55,
+      "humidity": 77.37,
+      "water_depth": 62.32,
+      "rain_volume": 0,
+      "wind_speed": 0.59,
+      "wind_direction": "N",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 209,
+    "fields": {
+      "timestamp": "2026-06-20T11:44:00Z",
+      "temperature": 31.69,
+      "humidity": 71.66,
+      "water_depth": 62.32,
+      "rain_volume": 0,
+      "wind_speed": 0.67,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 210,
+    "fields": {
+      "timestamp": "2026-06-20T12:22:00Z",
+      "temperature": 30.88,
+      "humidity": 72.44,
+      "water_depth": 67.71,
+      "rain_volume": 0,
+      "wind_speed": 0.73,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 7.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 211,
+    "fields": {
+      "timestamp": "2026-06-20T13:00:00Z",
+      "temperature": 31.15,
+      "humidity": 74.09,
+      "water_depth": 59.85,
+      "rain_volume": 0,
+      "wind_speed": 3.25,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 5.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 212,
+    "fields": {
+      "timestamp": "2026-06-20T13:38:00Z",
+      "temperature": 31.02,
+      "humidity": 75.39,
+      "water_depth": 60.98,
+      "rain_volume": 0,
+      "wind_speed": 1.55,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 213,
+    "fields": {
+      "timestamp": "2026-06-20T14:16:00Z",
+      "temperature": 32.0,
+      "humidity": 77.38,
+      "water_depth": 59.41,
+      "rain_volume": 0,
+      "wind_speed": 0.75,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 214,
+    "fields": {
+      "timestamp": "2026-06-20T14:54:00Z",
+      "temperature": 31.02,
+      "humidity": 74.89,
+      "water_depth": 58.8,
+      "rain_volume": 0,
+      "wind_speed": 1.88,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 215,
+    "fields": {
+      "timestamp": "2026-06-20T15:32:00Z",
+      "temperature": 29.76,
+      "humidity": 78.3,
+      "water_depth": 55.83,
+      "rain_volume": 0.44,
+      "wind_speed": 2.52,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 3.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 216,
+    "fields": {
+      "timestamp": "2026-06-20T16:10:00Z",
+      "temperature": 28.52,
+      "humidity": 78.49,
+      "water_depth": 57.19,
+      "rain_volume": 0.94,
+      "wind_speed": 0.64,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 217,
+    "fields": {
+      "timestamp": "2026-06-20T16:48:00Z",
+      "temperature": 28.2,
+      "humidity": 78.78,
+      "water_depth": 54.12,
+      "rain_volume": 4.79,
+      "wind_speed": 1.07,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 218,
+    "fields": {
+      "timestamp": "2026-06-20T17:26:00Z",
+      "temperature": 28.14,
+      "humidity": 79.6,
+      "water_depth": 54.7,
+      "rain_volume": 1.11,
+      "wind_speed": 0.26,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 3.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 219,
+    "fields": {
+      "timestamp": "2026-06-20T18:04:00Z",
+      "temperature": 26.62,
+      "humidity": 83.15,
+      "water_depth": 54.03,
+      "rain_volume": 1.82,
+      "wind_speed": 0.4,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 3.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 220,
+    "fields": {
+      "timestamp": "2026-06-20T18:42:00Z",
+      "temperature": 26.29,
+      "humidity": 82.3,
+      "water_depth": 55.16,
+      "rain_volume": 0.04,
+      "wind_speed": 2.29,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 3.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 221,
+    "fields": {
+      "timestamp": "2026-06-20T19:20:00Z",
+      "temperature": 25.64,
+      "humidity": 85.64,
+      "water_depth": 123.44,
+      "rain_volume": 0.23,
+      "wind_speed": 0.4,
+      "wind_direction": "E",
+      "flood_risk": "warning",
+      "flood_probability": 26.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 222,
+    "fields": {
+      "timestamp": "2026-06-20T19:58:00Z",
+      "temperature": 25.42,
+      "humidity": 89.7,
+      "water_depth": 115.08,
+      "rain_volume": 1.5,
+      "wind_speed": 1.49,
+      "wind_direction": "NNE",
+      "flood_risk": "warning",
+      "flood_probability": 23.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 223,
+    "fields": {
+      "timestamp": "2026-06-20T20:36:00Z",
+      "temperature": 25.84,
+      "humidity": 88.1,
+      "water_depth": 147.04,
+      "rain_volume": 1.96,
+      "wind_speed": 2.47,
+      "wind_direction": "SSE",
+      "flood_risk": "warning",
+      "flood_probability": 34.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 224,
+    "fields": {
+      "timestamp": "2026-06-20T21:14:00Z",
+      "temperature": 24.61,
+      "humidity": 97.34,
+      "water_depth": 116.88,
+      "rain_volume": 2.75,
+      "wind_speed": 0.23,
+      "wind_direction": "E",
+      "flood_risk": "warning",
+      "flood_probability": 24.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 225,
+    "fields": {
+      "timestamp": "2026-06-20T21:52:00Z",
+      "temperature": 24.17,
+      "humidity": 93.06,
+      "water_depth": 119.16,
+      "rain_volume": 1.03,
+      "wind_speed": 1.68,
+      "wind_direction": "NNE",
+      "flood_risk": "warning",
+      "flood_probability": 24.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 226,
+    "fields": {
+      "timestamp": "2026-06-20T22:30:00Z",
+      "temperature": 24.28,
+      "humidity": 94.03,
+      "water_depth": 59.68,
+      "rain_volume": 3.56,
+      "wind_speed": 0.59,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 227,
+    "fields": {
+      "timestamp": "2026-06-20T23:08:00Z",
+      "temperature": 23.17,
+      "humidity": 92.94,
+      "water_depth": 58.83,
+      "rain_volume": 5.9,
+      "wind_speed": 6.59,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 228,
+    "fields": {
+      "timestamp": "2026-06-20T23:46:00Z",
+      "temperature": 22.71,
+      "humidity": 96.06,
+      "water_depth": 56.55,
+      "rain_volume": 4.54,
+      "wind_speed": 1.32,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 229,
+    "fields": {
+      "timestamp": "2026-06-21T00:24:00Z",
+      "temperature": 23.76,
+      "humidity": 93.85,
+      "water_depth": 58.57,
+      "rain_volume": 0.33,
+      "wind_speed": 3.28,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 4.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 230,
+    "fields": {
+      "timestamp": "2026-06-21T01:02:00Z",
+      "temperature": 23.41,
+      "humidity": 94.9,
+      "water_depth": 62.65,
+      "rain_volume": 0,
+      "wind_speed": 1.6,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 231,
+    "fields": {
+      "timestamp": "2026-06-21T01:40:00Z",
+      "temperature": 22.62,
+      "humidity": 99.78,
+      "water_depth": 59.83,
+      "rain_volume": 0,
+      "wind_speed": 0.09,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 4.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 232,
+    "fields": {
+      "timestamp": "2026-06-21T02:18:00Z",
+      "temperature": 23.44,
+      "humidity": 93.47,
+      "water_depth": 62.93,
+      "rain_volume": 0,
+      "wind_speed": 2.01,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 233,
+    "fields": {
+      "timestamp": "2026-06-21T02:56:00Z",
+      "temperature": 23.1,
+      "humidity": 95.96,
+      "water_depth": 62.59,
+      "rain_volume": 0,
+      "wind_speed": 6.05,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 234,
+    "fields": {
+      "timestamp": "2026-06-21T03:34:00Z",
+      "temperature": 23.48,
+      "humidity": 90.66,
+      "water_depth": 62.23,
+      "rain_volume": 0,
+      "wind_speed": 1.84,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 235,
+    "fields": {
+      "timestamp": "2026-06-21T04:12:00Z",
+      "temperature": 25.46,
+      "humidity": 89.93,
+      "water_depth": 68.62,
+      "rain_volume": 0,
+      "wind_speed": 3.42,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 7.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 236,
+    "fields": {
+      "timestamp": "2026-06-21T04:50:00Z",
+      "temperature": 25.95,
+      "humidity": 93.54,
+      "water_depth": 65.6,
+      "rain_volume": 0,
+      "wind_speed": 4.31,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 237,
+    "fields": {
+      "timestamp": "2026-06-21T05:28:00Z",
+      "temperature": 25.27,
+      "humidity": 86.33,
+      "water_depth": 60.78,
+      "rain_volume": 0,
+      "wind_speed": 0.52,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 238,
+    "fields": {
+      "timestamp": "2026-06-21T06:06:00Z",
+      "temperature": 27.28,
+      "humidity": 88.62,
+      "water_depth": 65.37,
+      "rain_volume": 0.2,
+      "wind_speed": 0.48,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 239,
+    "fields": {
+      "timestamp": "2026-06-21T06:44:00Z",
+      "temperature": 26.67,
+      "humidity": 86.42,
+      "water_depth": 63.68,
+      "rain_volume": 0,
+      "wind_speed": 1.89,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 6.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 240,
+    "fields": {
+      "timestamp": "2026-06-21T07:22:00Z",
+      "temperature": 27.79,
+      "humidity": 81.29,
+      "water_depth": 66.53,
+      "rain_volume": 0.22,
+      "wind_speed": 1.06,
+      "wind_direction": "ENE",
+      "flood_risk": "safe",
+      "flood_probability": 7.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 241,
+    "fields": {
+      "timestamp": "2026-06-21T08:00:00Z",
+      "temperature": 28.7,
+      "humidity": 81.26,
+      "water_depth": 62.75,
+      "rain_volume": 0.04,
+      "wind_speed": 3.66,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 5.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 242,
+    "fields": {
+      "timestamp": "2026-06-21T08:38:00Z",
+      "temperature": 28.57,
+      "humidity": 81.95,
+      "water_depth": 64.1,
+      "rain_volume": 0,
+      "wind_speed": 4.61,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 6.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 243,
+    "fields": {
+      "timestamp": "2026-06-21T09:16:00Z",
+      "temperature": 29.85,
+      "humidity": 79.17,
+      "water_depth": 64.55,
+      "rain_volume": 0,
+      "wind_speed": 0.87,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 6.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 244,
+    "fields": {
+      "timestamp": "2026-06-21T09:54:00Z",
+      "temperature": 29.41,
+      "humidity": 74.79,
+      "water_depth": 65.27,
+      "rain_volume": 0,
+      "wind_speed": 0.54,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 6.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 245,
+    "fields": {
+      "timestamp": "2026-06-21T10:32:00Z",
+      "temperature": 30.6,
+      "humidity": 74.89,
+      "water_depth": 60.1,
+      "rain_volume": 0,
+      "wind_speed": 3.03,
+      "wind_direction": "ESE",
+      "flood_risk": "safe",
+      "flood_probability": 5.0
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 246,
+    "fields": {
+      "timestamp": "2026-06-21T11:10:00Z",
+      "temperature": 30.84,
+      "humidity": 74.85,
+      "water_depth": 60.63,
+      "rain_volume": 0,
+      "wind_speed": 0.64,
+      "wind_direction": "NNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 247,
+    "fields": {
+      "timestamp": "2026-06-21T11:48:00Z",
+      "temperature": 30.74,
+      "humidity": 75.19,
+      "water_depth": 60.34,
+      "rain_volume": 0,
+      "wind_speed": 3.46,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 5.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 248,
+    "fields": {
+      "timestamp": "2026-06-21T12:26:00Z",
+      "temperature": 30.55,
+      "humidity": 76.24,
+      "water_depth": 58.69,
+      "rain_volume": 0,
+      "wind_speed": 1.1,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 4.6
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 249,
+    "fields": {
+      "timestamp": "2026-06-21T13:04:00Z",
+      "temperature": 30.58,
+      "humidity": 75.7,
+      "water_depth": 62.24,
+      "rain_volume": 0,
+      "wind_speed": 2.2,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 5.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 250,
+    "fields": {
+      "timestamp": "2026-06-21T13:42:00Z",
+      "temperature": 31.24,
+      "humidity": 72.67,
+      "water_depth": 59.52,
+      "rain_volume": 0,
+      "wind_speed": 0.2,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 251,
+    "fields": {
+      "timestamp": "2026-06-21T14:20:00Z",
+      "temperature": 30.71,
+      "humidity": 77.1,
+      "water_depth": 54.98,
+      "rain_volume": 0,
+      "wind_speed": 1.96,
+      "wind_direction": "WSW",
+      "flood_risk": "safe",
+      "flood_probability": 3.3
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 252,
+    "fields": {
+      "timestamp": "2026-06-21T14:58:00Z",
+      "temperature": 29.98,
+      "humidity": 77.56,
+      "water_depth": 59.34,
+      "rain_volume": 1.38,
+      "wind_speed": 1.2,
+      "wind_direction": "SE",
+      "flood_risk": "safe",
+      "flood_probability": 4.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 253,
+    "fields": {
+      "timestamp": "2026-06-21T15:36:00Z",
+      "temperature": 29.88,
+      "humidity": 79.05,
+      "water_depth": 60.71,
+      "rain_volume": 0.39,
+      "wind_speed": 1.77,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 5.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 254,
+    "fields": {
+      "timestamp": "2026-06-21T16:14:00Z",
+      "temperature": 29.38,
+      "humidity": 82.16,
+      "water_depth": 57.73,
+      "rain_volume": 0,
+      "wind_speed": 0.37,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 255,
+    "fields": {
+      "timestamp": "2026-06-21T16:52:00Z",
+      "temperature": 28.17,
+      "humidity": 81.67,
+      "water_depth": 52.63,
+      "rain_volume": 0,
+      "wind_speed": 2.67,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 2.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 256,
+    "fields": {
+      "timestamp": "2026-06-21T17:30:00Z",
+      "temperature": 28.31,
+      "humidity": 83.33,
+      "water_depth": 54.2,
+      "rain_volume": 0,
+      "wind_speed": 3.97,
+      "wind_direction": "E",
+      "flood_risk": "safe",
+      "flood_probability": 3.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 257,
+    "fields": {
+      "timestamp": "2026-06-21T18:08:00Z",
+      "temperature": 26.67,
+      "humidity": 84.86,
+      "water_depth": 57.53,
+      "rain_volume": 0,
+      "wind_speed": 0.49,
+      "wind_direction": "NE",
+      "flood_risk": "safe",
+      "flood_probability": 4.2
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 258,
+    "fields": {
+      "timestamp": "2026-06-21T18:46:00Z",
+      "temperature": 27.29,
+      "humidity": 81.68,
+      "water_depth": 53.58,
+      "rain_volume": 0,
+      "wind_speed": 0.2,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 2.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 259,
+    "fields": {
+      "timestamp": "2026-06-21T19:24:00Z",
+      "temperature": 25.58,
+      "humidity": 88.45,
+      "water_depth": 56.06,
+      "rain_volume": 0,
+      "wind_speed": 0.05,
+      "wind_direction": "SSW",
+      "flood_risk": "safe",
+      "flood_probability": 3.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 260,
+    "fields": {
+      "timestamp": "2026-06-21T20:02:00Z",
+      "temperature": 24.1,
+      "humidity": 90.42,
+      "water_depth": 57.22,
+      "rain_volume": 1.13,
+      "wind_speed": 2.05,
+      "wind_direction": "S",
+      "flood_risk": "safe",
+      "flood_probability": 4.1
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 261,
+    "fields": {
+      "timestamp": "2026-06-21T20:40:00Z",
+      "temperature": 24.19,
+      "humidity": 90.54,
+      "water_depth": 53.82,
+      "rain_volume": 0,
+      "wind_speed": 1.87,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 2.9
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 262,
+    "fields": {
+      "timestamp": "2026-06-21T21:18:00Z",
+      "temperature": 24.2,
+      "humidity": 89.52,
+      "water_depth": 56.35,
+      "rain_volume": 0,
+      "wind_speed": 1.58,
+      "wind_direction": "WNW",
+      "flood_risk": "safe",
+      "flood_probability": 3.8
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 263,
+    "fields": {
+      "timestamp": "2026-06-21T21:56:00Z",
+      "temperature": 24.3,
+      "humidity": 89.91,
+      "water_depth": 49.98,
+      "rain_volume": 0,
+      "wind_speed": 0.53,
+      "wind_direction": "SW",
+      "flood_risk": "safe",
+      "flood_probability": 1.7
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 264,
+    "fields": {
+      "timestamp": "2026-06-21T22:34:00Z",
+      "temperature": 23.08,
+      "humidity": 95.77,
+      "water_depth": 55.45,
+      "rain_volume": 0,
+      "wind_speed": 0.99,
+      "wind_direction": "NNE",
+      "flood_risk": "safe",
+      "flood_probability": 3.5
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 265,
+    "fields": {
+      "timestamp": "2026-06-21T23:12:00Z",
+      "temperature": 23.46,
+      "humidity": 94.58,
+      "water_depth": 58.2,
+      "rain_volume": 0,
+      "wind_speed": 1.81,
+      "wind_direction": "W",
+      "flood_risk": "safe",
+      "flood_probability": 4.4
+    }
+  },
+  {
+    "model": "forecast.sensorreading",
+    "pk": 266,
+    "fields": {
+      "timestamp": "2026-06-21T23:50:00Z",
+      "temperature": 22.31,
+      "humidity": 96.02,
+      "water_depth": 56.21,
+      "rain_volume": 0,
+      "wind_speed": 1.37,
+      "wind_direction": "NW",
+      "flood_risk": "safe",
+      "flood_probability": 3.7
+    }
+  }
+]

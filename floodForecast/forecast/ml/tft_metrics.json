@@ -1,0 +1,10 @@
+{
+  "rmse": 0.7837,
+  "mae": 0.6737,
+  "r2": -3.3345,
+  "mape": 0.9885,
+  "encoder_length": 24,
+  "prediction_length": 5,
+  "flood_threshold": 150,
+  "warning_threshold": 100
+}
